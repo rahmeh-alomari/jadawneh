@@ -1,0 +1,55 @@
+.one-line-details {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    // overflow: hidden;
+}
+
+.breadcrumb a:hover {
+    text-decoration: none;
+}
+
+.input {
+    color: #92288f !important
+}
+
+.breadcrumb-page {
+    color: black !important;
+    // background: #542779 !important ; 
+}
+.breadcrumb-page  h3{
+   font-weight: bold;
+}
+.breadcrumb.breadcrumb li a {
+    color: #5E5E5E !important;
+
+}
+
+.breadcrumb.breadcrumb li :hover {
+    color: #524779 !important;
+}
+
+.breadcrumb.breadcrumb li:hover {
+    color: #524779 !important;
+    text-decoration: underline;
+}
+
+
+.breadcrumb  {
+    margin-top: 10px !important;
+   // margin-inline-start: 15px !important;
+ 
+}
+a:hover, a:focus {
+    text-decoration: none !important;
+  }
+  @media only screen and (max-width: 600px) {
+  
+    .pod-card ,.card-parent{
+     
+        margin-block-start: 25px !important;
+    }
+    
+  }.des-color{
+    color: #524779 !important;
+}

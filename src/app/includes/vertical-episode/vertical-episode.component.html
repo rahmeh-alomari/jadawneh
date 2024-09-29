@@ -1,0 +1,38 @@
+<div class="mt-1 card-parent" [ngClass]="{ 'card-width': applyClass }">
+  <div class="item card mt-3 item-card" >
+    <!-- Image Section -->
+    <div class="image-link">
+      <a [routerLink]="['/', locale.prefix, 'episode', item.episode_id]">
+        <img class="card-img-top slider-img" [src]="item.image" alt="" />
+      </a>
+    </div>
+
+   <!-- Card Body Section -->
+<div class="card-body pod-body d-flex flex-column">
+  <a [routerLink]="['/', locale.prefix, 'episode', item.episode_id]">
+    <h5 class="card-title text-center my-3">{{ item.title }}</h5>
+  </a>
+
+  <!-- Program Title and Duration -->
+  <span class="my-3 text-center flex-grow-1">
+    <a [routerLink]="['/', locale.prefix, 'program', item.program_id]" class="text-muted one-line-details">{{ item.program_title }}</a>
+    <a class="pt-3 text-muted" style="display: block; min-height: 40px;">{{ item.duration }}</a>
+  </span>
+
+  <!-- Row and Column for Player Component -->
+  <div class="container">
+    <div class="" style="margin: auto;">
+      <!-- Player Component -->
+      <app-vertical-eposide-player
+        [locale]="locale"
+        [episode]="item"
+        class="one-line-details mt-auto"
+        (onStateChanged)="onStateChanged($event)"
+        (onManuelStateChanged)="onManuelStateChanged($event)">
+      </app-vertical-eposide-player>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>

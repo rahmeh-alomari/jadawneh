@@ -1,0 +1,137 @@
+.fixed {
+    bottom: 0 !important;
+    position: absolute !important;
+}
+
+.podqasti {
+    background-color: #FAF7FD;
+    box-shadow: 0 0px 4px 2px #e9e9e9;
+    display: flex;
+    /* Ensure flexbox is applied */
+    gap: 10px;
+    /* Space between images */
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+    overflow-x: hidden;
+    /* Allow horizontal scrolling if necessary */
+}
+
+.img-about-us {
+    max-width: 49%;
+    /* Prevent images from exceeding container width */
+    height: auto;
+    /* Maintain aspect ratio */
+    flex: 1 1 0;
+    /* Allow images to grow and shrink */
+
+}
+.breadcrumb-page {
+    padding: 30px 0px !important;
+    /* background: #ffffff 0% 0% no-repeat padding-box; */
+    color: #fff;
+}
+.pod-body {
+    width: 92% !important;
+    margin-top: 30px;
+}
+
+@media (min-width: 1000px) {
+    .breadcrumb-page {
+        padding: 30px 35px !important;
+      
+    }
+    .pod-body {
+
+        margin-inline-start: 35px;
+    }
+    .abouts-us-tiltle{
+        margin-inline-start: 45px;
+   }
+    
+  }
+.pod-body {
+
+    border-radius: 16px;
+margin: auto;
+}
+
+.img-pd {
+    width: 100%;
+
+    object-fit: contain;
+    padding: 20px;
+}
+
+.center-text p {
+    color: #542779;
+}
+.center-text,.imges-pd{
+    margin-block-start: 30px;
+}
+.text-center-align {
+
+    text-align: start;
+}
+.text-mession {
+    max-width: max-content !important;
+    background-color: #FAF7FD;
+    padding-top: 214px;
+    padding-bottom: 63px;
+    padding-right: 56px;
+    padding-left: 69px;
+    box-shadow: 0 0px 4px 2px #e9e9e9;
+
+}
+
+.text-photo {
+    max-width: max-content !important;
+ 
+    padding-top: 114px;
+    padding-bottom: 23px;
+    padding-right: 56px;
+    padding-left: 69px;
+  
+
+}
+.image-container-about-us{
+    display: flex;
+    gap: 10px;
+}
+.center-text h3 {
+    font-size: 32px !important;
+    color: #92288F;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .center-text {
+        padding: 50px 5px;
+        /* Reduce padding on smaller screens */
+    }
+
+    .center-text h3 {
+        font-size: 24px !important;
+        /* Reduce font size on smaller screens */
+    }
+
+    .img-pd,
+    .img-about-us {
+        width: 100%;
+        padding: 10px;
+        /* Reduce padding on smaller screens */
+    }
+
+    .imges-pd {
+        margin: auto;
+    text-align: center;
+    /* margin: -15px; */
+    padding: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .image-container-about-us {
+      flex-direction: column; /* Stack images vertically on small screens */
+      align-items: center; /* Center the images */
+      margin-bottom: 30px;
+    }
+  }

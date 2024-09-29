@@ -1,0 +1,60 @@
+.card {
+    border: 1px solid #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 20px 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    width: calc(90% - 20px);;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+  }
+  .card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .Blogs-des{
+    color: #542779;
+    font-size: 20px;
+    margin-top: -9px;
+    text-align: justify;
+
+  }
+  .card .content {
+    font-size: 16px;
+    color: #666;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-height: 1.5em; /* Adjust this height to control the collapsed height */
+  }
+  .card .btn-see-more {
+    display: none;
+    margin-top: 10px;
+    color: #007bff;
+    cursor: pointer;
+  }
+.Blogs-img{
+  border-radius: 20px;
+}
+.Blogs-title{
+  color: #92288F;
+  font-size: 32px !important;
+  font-weight: bold;
+}
+  @media (min-width: 1000px) {
+    .breadcrumb-page {
+        padding: 30px 76px !important;
+      
+    }
+    .pod-body {
+
+        margin-inline-start: 35px;
+    }
+    .abouts-us-tiltle{
+        margin-inline-start: 80px;
+   }
+    
+  }

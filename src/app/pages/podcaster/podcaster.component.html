@@ -1,0 +1,135 @@
+<div appDynamicMeta 
+     [pageTitle]="locale.prefix === 'ar' 
+        ? podcaster.title + ' على بودكاستي: استمع إلى البودكاست العربية الخاصة بهم' 
+        : (podcaster.title ) + ' on Podqasti: Listen to their Arabic Podcasts'"
+     [pageDescription]="locale.prefix === 'ar' 
+        ? 'اكتشف بودكاست عربية آسرة من قبل ' + podcaster.title + ' على بودكاستي. استكشف برامجهم المتنوعة وانغمس في سردهم القصصي الفريد.' 
+        : 'Discover captivating Arabic podcasts by ' + podcaster.title  + ' on Podqasti. Explore their diverse programs and immerse yourself in their unique storytelling.'">
+</div>
+
+
+
+
+<div class="container">
+    <section class="breadcrumb-page2">
+        <div class="sub-header">
+            <h1>{{ "Podcaster" | translate }}</h1>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="javascript:;" [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+                </li>
+                <li>
+                    <a href="javascript:;" [routerLink]="['/', locale.prefix, 'Podcasters']">&nbsp; {{'Podcasters' |
+                        translate}} / </a>
+                </li>
+                <li *ngIf="podcaster">
+                    <a href="javascript:;">&nbsp; {{ podcaster.title }}</a>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <div class="container">
+        <ng-container *ngIf="podcaster">
+            <section class="main-program">
+                <div class="program-container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="d-flex align-items-center top">
+                                <h1>
+                                    {{ 'ContentCreator' | translate }}
+
+                                </h1>
+                                <div class="heart-container mb-4">
+
+
+                                    <div class="tooltip-container">
+                                        <a href="javascript:;" class="heart" (click)="toggleFavorite(podcaster)" (mouseenter)="showTooltip = true"
+                  (mouseleave)="showTooltip = false">
+                  <i class="fa-solid fa-star fa-2xl start"[ngClass]="{'text-danger': podcaster.you_favored_this}" ></i>
+                  <div *ngIf="showTooltip && !podcaster.you_favored_this" class="custom-tooltip customtool" style="z-index: 9999999999999;">
+                    {{'Add To Favourite' | translate}}
+                    <div class="tooltip-arrow"></div>
+                  </div>
+
+                  <div *ngIf="showTooltip && podcaster.you_favored_this" class="custom-tooltip customtool"  style="z-index: 9999999999999;width: max-content; padding: 15px;">
+                    {{'Remove From Favorite' | translate}}
+                    <div class="tooltip-arrow"></div>
+                  </div>
+                
+                </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <p class="justified-text">
+                                {{ stripHtmlTags(podcaster.description) }}
+                            </p>
+
+
+                        </div>
+
+                        <div class="col-md-6"> <img [src]="podcaster.image" alt="podcaster" class="img-pod"></div>
+                    </div>
+
+
+                    <!--   <div>
+
+                <div class="col-md-9">
+                        <h4>{{ 'Podcaster' | translate }}</h4>
+                        <h3>{{ podcaster.title }}</h3> -->
+                    <!-- <p *ngIf="locale.direction == 'rtl'">
+                            {{'Programs' | translate}} {{ podcaster.program_count }}
+                        </p> -->
+                    <!-- <p *ngIf="locale.direction == 'ltr'">
+                            {{ podcaster.program_count }} {{'Programs' | translate}}
+                        </p> 
+                        <p>-->
+                    <!-- <a href="javascript:;" class="share">
+                            <i class="fi-rr-share"></i>
+                        </a> -->
+                    <!-- <a href="javascript:;" class="heart" (click)="toggleFavorite(podcaster)">
+                                <i class="far fa-heart" [ngClass]="{'text-danger': podcaster.you_favored_this}"></i>
+                            </a> 
+                        </p>
+                    </div>
+                </div>-->
+                </div>
+            </section>
+
+            <!-- <section class="player-body mt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                    <h3>{{'About Podcaster' | translate}}</h3>
+                    <hr class="p-underline" />
+                    <div [innerHtml]="podcaster.description">
+                    </div>
+                </div>
+            </div>
+        </section> -->
+            <div>
+                <section class="program-card-container">
+
+
+                    <h1 class="card-container-pad">
+                        {{'Programs' | translate}}
+                    </h1>
+                    <div class="row">
+                        <div class="col-12 col-md-4" *ngFor="let program of podcaster.programs">
+                            <app-program-podcaster-card [program]="program" [locale]="locale" [footer]="false">
+                            </app-program-podcaster-card>
+                        </div>
+                    </div>
+
+
+                </section>
+            </div>
+
+        </ng-container>
+    </div>
+
+
+
+</div>

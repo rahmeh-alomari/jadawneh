@@ -1,0 +1,115 @@
+<div appDynamicMeta 
+     [pageTitle]="locale.prefix === 'ar' ? 'حول بودكاستي: تمكين الأصوات العربية من خلال البودكاست' : 'About Podqasti: Empowering Arabic Voices Through Podcasting'"
+     [pageDescription]="locale.prefix === 'ar' ? 'تعرف على مهمة بودكاستي في ربط منشئي البودكاست العرب بجمهور عالمي. اكتشف شغفنا بالقصص الصوتية والتزامنا بالمحتوى عالي الجودة.' : 'Learn about Podqasti\'s mission to connect Arabic podcasters with a global audience. Discover our passion for audio storytelling and our commitment to quality content.'">
+</div>
+
+
+
+<div class="container">
+    <section class="breadcrumb-page breadcrumb-page-pb-120">
+        <div class="sub-header">
+            <h3>{{ 'About Us' | translate }}</h3>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="javascript:;" [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+                </li>
+                <li>
+                    <a href="javascript:;">&nbsp; {{'About Us' | translate}}</a>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+
+    <!-- <section class="player-body " *ngIf="page">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                    <h3>{{'About Us' | translate}}</h3>
+                    <hr class="p-underline" />
+                    <p>مرحباً بكم في منصة بودكاستي، أول منصة بودكاست للمحتوى العربي الحصري، حيث نقدم لكم عدد كبير و
+                        متنوع من البرامج التي من شأنها الارتقاء بمستوى الوعي و المعرفة من خلال تسليط الضوء على العديد من
+                        التحديات التي تواجه عالمنا اليوم، ويقوم بتقديم برامجنا نخبة من المذيعين وصانعي المحتوى المتألقين
+                        والموهوبين.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <!-- <div style="text-align: start" class="abouts-us-tiltle">
+        <h3 style="font-weight: bold;color: #524779;">
+            {{'About Us' | translate}}
+        </h3>
+    </div> -->
+
+
+
+    <div class="card-body pod-body">
+        <div class="row p-3 " style="margin-top: 40px;">
+            <div class="col-12 col-md-4  center-text">
+                <h3> {{'Welcome to Podqasti!' | translate}}
+                </h3>
+
+                <p>
+                    {{'As a leading podcast production company and platform, Podqasti is dedicated to amplifying voices
+                    from the Arab world through high-quality, diverse, and engaging content.
+                    ' | translate}}
+
+                </p>
+            </div>
+            <div class="col-12 col-md-8 imges-pd">
+                <img src="../../../assets/podcasti/images/Hoyan Setup.jpg" alt="" class="podqasti img-pd" />
+                <div class="d-flex align-items-center podqasti mt-2 p-3">
+                    <img src="../../../assets/podcasti/images/Control Room A.jpg" alt="" class="img-about-us" />
+                    <img src="../../../assets/podcasti/images/Chair & Mic.jpg" alt="" class="img-about-us" />
+                </div>
+
+            </div>
+        </div>
+        <div class="row mt-5" style=" margin-bottom: -225px;">
+            <div class="col-12 col-md-7 ">
+                <p class="text-center-align" style="color: #542779; font-size: 20px;">
+                    {{'We specialize in producing podcasts that cover a wide range of subjects,
+                     including compelling stories, educational insights, and entertainment that resonates with our audience.' | translate}}
+
+                </p>
+                <h3 style="color: #92288F;font-size: 28px;text-align: start;">
+                    {{'Install the application now' | translate}}
+                </h3>
+                <div class="image-container-about-us" >
+                    <img src="../../../assets/podcasti/images/google-play.png" alt="Google Play" />
+                    <img src="../../../assets/podcasti/images/app store.png" alt="Apple Store" />
+                  </div>
+                  
+            </div>
+
+            <div class="col-12 col-md-5 ">
+                <img src="../../../assets/podcasti/images/phone-about.png" alt="Google Play" />
+
+            </div>
+        </div>
+      <div class="row mt-5 text-mession " >
+            <p style="font-size: 20px; color: #542779; text-align: start; ">
+              {{'We specialize in producing podcasts that cover a wide range of subjects, including compelling stories, educational insights, and entertainment that resonates with our audience.' | translate}}
+            </p>
+            <p style="font-size: 20px; color: #542779; text-align: start; ">
+                {{'Our team consists of talented and passionate hosts and producers committed to storytelling excellence. By leveraging cutting-edge technology and innovative production techniques, we ensure the highest audio standards.' | translate}}
+              </p>
+                 </div>
+                 
+        <div  class="row  text-photo " >
+            <p style="font-size: 20px; color: #542779; text-align: start;">
+              {{'Our vision is to be the go-to platform for Arab listeners and content creators, offering innovative and culturally relevant podcasts.' | translate}}
+            </p>
+                 </div>
+
+        <div class="row mt-5" style="max-width: max-content!important;margin-bottom: 40px;">
+         <img src="../../../assets/podcasti/images/phones.png" alt="phone-aboutus" />
+        </div>
+  
+    </div>
+
+</div>

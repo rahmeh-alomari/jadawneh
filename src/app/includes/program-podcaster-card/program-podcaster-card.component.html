@@ -1,0 +1,44 @@
+<div >
+ 
+    <a [routerLink]="['/', locale.prefix, 'program', program.program_id]">
+      <div class="item card mt-3 mr-1 ml-1 item-card">
+        <div href="#" class="image-link">
+          <img class="card-img-top" [src]="program.image" alt="" />
+          <div class="color-overlay">
+          
+            <a [routerLink]="['/', locale.prefix, 'program', program.program_id]" class="play-icon">
+              <i class="fas fa-play"></i>
+            </a>
+            <a href="javascript:;" class="card-icon" (click)="toggleFavorite()">
+              <i class="fa-solid fa-star" aria-hidden="true" [ngClass]="{ 'text-danger': program.you_favored_this }"></i>
+            </a>
+          </div>
+        </div>
+        <div class="card-body pod-body pb-3">
+          <h3 class="card-title">
+            {{ program.title }}
+          </h3>
+          <div class="p-info" *ngIf="counters">
+            <div>{{ "Episodes count" | translate }} : {{ program.episode_count }}</div> 
+          </div>
+          <div class="p-info" *ngIf="counters">
+            <div>{{ "Seasons" | translate }} : {{ program.season_count }}</div>
+          </div>
+          <!-- <span *ngIf="program.broadcaster">
+            {{ "Podcast by" | translate }}:
+            <a [routerLink]="['/', locale.prefix, 'podcaster', program.broadcaster.broadcaster_id]" class="p">{{ program.broadcaster.title }}</a>
+          </span>
+          <ul class="list-inline m-0 card-ul" *ngIf="footer">
+            <li class="program-icons">
+              <i class="far fa-heart"></i>{{ program.favored_by }}
+              <span class="comments"></span>
+            </li>
+           
+          </ul> -->
+        </div>
+      </div>
+    </a>
+
+  
+ 
+  </div>

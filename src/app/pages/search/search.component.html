@@ -1,0 +1,115 @@
+<div class="container">
+
+  <section class="breadcrumb-page">
+    <div class="sub-header">
+      <h3>{{ 'Search' | translate }}</h3>
+      <ol class="breadcrumb">
+        <li>
+          <a href="javascript:;" [routerLink]="['/']"> {{ 'Home' | translate }} / </a>
+        </li>
+        <li>
+          <a href="javascript:;">&nbsp; {{'Episodes' | translate}}</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section>
+    <ng-container *ngIf="categories.length > 0">
+      <div class="title-wrapper">
+        <h2 class="main-title">
+          {{ 'Search in Programs' | translate }}
+        </h2>
+        <!-- Optional "See More" Link -->
+        <!-- <a class="see-more" [routerLink]="['/', locale.prefix, 'Most-Popular']">{{ 'See More' | translate }}</a> -->
+      </div>
+
+      <div class="category-list" >
+        <!-- [ngClass]="{ 'scrollable-container': categories.length > 8 }" -->
+        <div class="row">
+          <div *ngFor="let item of categories"    class="col-12 col-md-6 col-lg-3 col-xl-3" >
+            <app-program-podcaster-card [program]="item" [locale]="locale" 
+              [footer]="false"></app-program-podcaster-card>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="episodes.length>0">
+      <div class="title-wrapper">
+        <h2 class="main-title">
+          {{ 'Search in episodes' | translate }}
+        </h2>
+        <!-- <a class="see-more" [routerLink]="['/', locale.prefix, 'Most-Popular'] ">{{ 'See More' | translate
+                }} </a> -->
+      </div>
+
+
+   
+       
+        <div >
+          <!-- [ngClass]="{'scrollable-container': episodes.length >8}" -->
+          <div class="row">
+            <div 
+            class="col-12 col-md-6 col-lg-6 col-xl-3"
+       
+            *ngFor="let item of episodes">
+              <app-vertical-episode  [item]="item" [locale]="locale" [footer]="false"  [applyClass]="true">
+              </app-vertical-episode >
+            </div>
+          </div> 
+        </div>
+
+        
+   
+
+    </ng-container>
+
+
+    <ng-container *ngIf="broadcasters.length > 0">
+      <div class="title-wrapper">
+        <h2 class="main-title">
+          {{ 'Search in Content Creators ' | translate }}
+        </h2>
+        
+      </div>
+
+      <div class="broadcaster-list" >
+        <!-- [ngClass]="{ 'scrollable-container': broadcasters.length > 8 }" -->
+        <div class="row row-fix">
+          <div *ngFor="let item of broadcasters" class="col-12 col-md-6 col-lg-6 col-xl-3">
+            <app-podcaster-card [broadcaster]="item" [locale]="locale"    [footer]="false"></app-podcaster-card>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+
+    <ng-container *ngIf="!categories.length&& !broadcasters.length&&!episodes.length">
+      <div style="margin-inline-start: 60px;">
+        <div class="conta-title item card mt-3 mr-1 ml-1 item-card">
+
+          <h3 class="p-3">
+
+            {{ 'Sorry, we couldn’t find any results for your search. Feel free to explore other topics.' | translate }}
+          </h3>
+        </div>
+      </div>
+
+
+    </ng-container>
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+</div>

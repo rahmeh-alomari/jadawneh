@@ -1,0 +1,121 @@
+<div class="container">
+
+        <section class="breadcrumb-page">
+          <div class="sub-header">
+            <h3>{{ 'Account' | translate }}</h3>
+            <ol class="breadcrumb">
+              <li>
+                <a href="javascript:;" [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+              </li>
+              <li>
+                <a href="javascript:;">&nbsp; {{ 'Update Account' | translate }} </a>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+
+<ng-container *ngIf="user">
+
+     
+    <div class="row mt-5 ">
+       
+   
+        <!-- <div class="col-md-12 col-12 color-logo">
+            <a [routerLink]="['/', locale.prefix]">
+                <img src="assets/podcasti/images/color-logo.png" alt="">
+            </a>
+        </div> -->
+        <div class="col-md-9 col-12 card"  style="margin: auto;">
+       
+            <ul class="list-unstyled account-list">
+                <li>
+                    <a [routerLink]="['/', locale.prefix, 'profile']" 
+                       [routerLinkActiveOptions]="{ exact: true }" 
+                       routerLinkActive="active-link" 
+                       class="py-1 d-block">{{ 'Update Account' | translate }}</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/', locale.prefix, 'profile', 'security']" 
+                       routerLinkActive="active-link" 
+                       class="py-1 d-block">{{ 'Change Password' | translate }}</a>
+                </li>
+            </ul>
+              
+                <!-- <span>{{ 'new account' | translate }}</span> -->
+          
+            <div class="login-form"  style="margin-bottom: 30px;padding: 60px 30px 100px;">
+                <h5 class="main-title-4 ">  {{ 'Update Account' | translate }}</h5>
+                <form [formGroup]="form">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text input-group-text-2" id="Name">
+                                <i class="far fa-user"></i>
+                            </span>
+                        </div>
+                        <input name="name" type="text" [formControlName]="'name'" appValidateInputDirective="name is required" class="form-control form-control-2" placeholder="Name" aria-label="Name" aria-describedby="Name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text input-group-text-2" id="email"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        </div>
+                        <input name="email" type="text" [formControlName]="'email'" appValidateInputDirective="Email is required" class="form-control form-control-2" placeholder="Email" aria-label="Email" aria-describedby="email">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text input-group-text-2" id="Sex">
+                                <i class="far fa-user"></i>
+                            </span>
+                        </div>
+                        
+                        <select name="sex" [formControlName]="'sex'" class="form-control form-control-2 select-sex">
+                            <option value="UNSPECIFIED">{{ 'UNSPECIFIED' | translate }}</option>
+                            <option value="MALE">{{ 'MALE' | translate }}</option>
+                            <option value="FEMALE">{{ 'FEMALE' | translate }}</option>
+                        </select>
+                    </div>
+                 
+                    <button 
+                    [disabled]="form.invalid"
+                        (click)="updateProfile()"
+                        type="button" 
+                        class="btn btn-primary btn-lg btn-block submit-btn">
+                        {{ 'Submit' | translate }}
+                    </button>
+                  
+                </form>
+           
+            </div>
+        </div>
+        <!-- <div class="col-md-6 col-12 p-0">
+            <div class="login-image">
+                <img src="assets/podcasti/images/background.png" alt="">
+             
+            </div>
+        </div> -->
+    </div>
+</ng-container>
+
+
+
+
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

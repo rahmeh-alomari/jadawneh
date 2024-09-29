@@ -1,0 +1,410 @@
+
+body.has-rtl {
+  @font-face {
+    font-family: "Poppins" !important;
+
+    src: url("fonts/ar/TitanOne-Regular.ttf");
+  }
+  header {
+    direction: rtl;
+  }
+  .main-slider-2 h3,
+  .second-slider .item,
+  .main-title,
+  .card,
+  .custom-card,
+  .download-app .description,
+  .download-app .store,
+  .player-container h3,
+  .player-container .row .col-md-9 div,
+  .player-body h3,
+  .player-body p,
+  .program-container p,
+  .program-container h3,
+  .program-container h4,
+  .dropdown-item,
+  .header-search-nav,
+  .footer-02 .footer-heading,
+  .footer-02 .list-unstyled li a,
+  .footer-main,
+  .main-title-2,
+  table.vertical-episode td,
+  .breadcrumb-page2 .sub-header h3,
+  .sub-header h3,
+  .cover h4,
+  .cover h2,
+  .main-title-3,
+  .player-top-head {
+    text-align: right;
+    margin-bottom: 2px;
+
+  }
+  .card.pod-card {
+    text-align: center !important;
+    padding-bottom: 20px;
+  }
+  .mr-auto,
+  .mx-auto {
+    margin-left: auto;
+    margin-right: 1px !important;
+  }
+  .main-player .player-container img,
+  .player-container .heart,
+  .player-container .item2,
+  .program-container img {
+    float: inline-start;
+  }
+  @media (min-width: 802px) {
+    .img-container{
+      margin-inline-start: -110px !important;
+    }
+    .main-player .player-container img,
+  .player-container .heart,
+  .player-container .item2,
+  .program-container img {
+    float: left;
+  }
+    }
+    @media (max-width: 801px) {
+      .img-container{
+text-align: center;      }
+.program-tilte{
+margin: auto;}
+      }
+  .navbar-brand {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  // .custom1,.main-slider-2{
+  //     direction: ltr;
+  // }
+  html {
+    direction: rtl;
+  }
+  #demos .owl-carousel .item h4,
+  .custom1 .item h2,
+  .custom1 .item p {
+    text-align: right;
+    direction: rtl;
+  }
+  .slider-bottom {
+    // right: 55px;
+  }
+  .slider-play-icon {
+    float: right;
+    margin-left: 10px;
+    // margin-right: unset;
+    direction: rtl;
+  }
+  // .main-title::before{
+  //     right: 0;
+  //     left: unset;
+  // }
+  // .category-slider .owl-nav .owl-next {
+  //   left: 0;
+  //   right: unset;
+  // }
+  // .category-slider .owl-nav .owl-prev {
+  //   left: 40px;
+  //   right: unset;
+  // }
+  // .category-slider .owl-stage-outer{
+  //     direction: ltr;
+  // }
+ 
+  @media (min-width: 1200px) {
+    .header-search {
+      width:340px !important;
+    }
+  
+  }
+  .plyer-episode{
+    margin-block-start: -1px !important;
+   width: 5.1em !important;
+   display: -webkit-inline-box !important;
+   color: #92288f;
+ }
+.center-text {
+  padding: 140px 40px;
+  text-align: start;
+  background-color: #FAF7FD;
+  box-shadow: 0 0px 4px 2px #e9e9e9;
+}
+  
+  .card-ul li {
+    float: right;
+    margin-left: 10px;
+    margin-right: unset;
+    direction: rtl;
+  }
+  .color-overlay {
+    direction: rtl;
+  }
+  .footer-items {
+    text-align: right;
+  }
+  .lang {
+    border-right: unset;
+    border-left: 1px solid #989898;
+  }
+  .program-container p .heart {
+    float: left;
+    margin: 0 -110px;
+    padding: 4px 9px 3px 0px;
+  }
+  .program-container p .share {
+    float: left;
+    padding: 6px 11px 0px 2px;
+    margin: -100px 0 0 57px;
+  }
+  .second-slider .owl-nav .owl-next {
+    left: 15px;
+  }
+  .second-slider .owl-nav .owl-prev {
+    left: 50px;
+  }
+  .header-search-nav i {
+    margin: 8px 13px 0 0;
+  }
+  .header-search {
+    padding: 0 40px 0 0 !important;
+  }
+  .header-search-nav {
+    margin-right: 10px;
+  }
+  .slider-play-icon i {
+    padding-left: 5px;
+  }
+  .card-ul li:last-child {
+    float: left;
+  }
+  .card-ul li:first-child {
+    padding: 0 0 0 10px;
+    color: black;
+  }
+  .dropdown-item i {
+    padding-left: 10px;
+  }
+  .color-overlay div.card-icon {
+    margin: 0 0 0 40px;
+  }
+  .color-overlay a.card-icon {
+    margin: 0 40px 0 0;
+  }
+  .custom-dropdown-menu {
+    right: 10%;
+    max-width: 57%;
+  }
+  .card-ul li:first-child {
+    // border-left: 1px solid #000;
+  }
+  .main-title-2::before {
+    left: unset;
+    right: 2px;
+  }
+  .card-ul li i {
+    margin-left: 5px;
+  }
+  .program-icons {
+    float: right !important;
+  }
+  .table-number {
+    border-left: 1px solid #869791;
+    padding-left: 15px;
+  }
+  .table-headphones {
+    padding-right: 15px;
+  }
+  .table-play-icon i {
+    margin-left: 1px;
+  }
+  .table-play-icon {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 14px 18px;
+  }
+  .fixicone{
+    line-height: .2 !important;
+
+    color: #92288f;
+  }
+  .custom-dropdown-menu2 {
+    left: 0 !important;
+    max-width: 57%;
+  }
+  .new-nav-item2 {
+    float: left;
+    margin: 0 -54px;
+    padding: 8px 15px;
+  }
+  .custom-dropdown-menu3 {
+    // top: 52%;
+    left: 13% !important;
+    top: 71% !important;
+  }
+  .program-container p .favorit {
+    padding: 1px 15px;
+  }
+  .category-image {
+    // padding: 0 32px 0 0;
+    text-align: center;
+  }
+  .category-items .owl-stage-outer .owl-stage {
+    margin-left: auto;
+  }
+  .main-title-3::before {
+    right: 17px;
+    left: unset;
+  }
+  .login-form input {
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+  }
+  .login-form .input-group-prepend span {
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+  }
+  .sign-text {
+    float: right;
+  }
+  .sign-social-media {
+    float: left;
+  }
+  .program-body .category-slider .owl-stage-outer .owl-stage {
+    float: right;
+  }
+  .col-md-8.col-xl-8.ml-3.card {
+    margin-right: 1rem !important;
+    margin-left: unset !important;
+  }
+  .player-counter:first-child {
+    right: 15px;
+  }
+  .player-counter:last-child {
+    left: 15px;
+  }
+  .player-body .item,
+  .program-body .item {
+    border-right: 1px solid #e8e8e8;
+  }
+  .sign-social-media a:first-child {
+    margin-left: 10px;
+  }
+  .pr-0 {
+    padding-left: 0 !important;
+    padding-right: 15px !important;
+  }
+  .pl-0 {
+    padding-right: 0 !important;
+    padding-left: 15px !important;
+  }
+  .second-slider .owl-nav button span {
+    display: block;
+    margin-top: -2px;
+    font-size: 24px;
+  }
+  @media (max-width: 992px) {
+    .slider-play-icon {
+    font-size: 10px;
+    }
+    .plyer-episode{
+      // width: auto !important;
+      width: -moz-fit-content !important;
+      width: inherit;
+      margin-inline-end: 150px;
+      // width: auto !important;
+      text-align: center;
+      max-width: 160px;
+  
+ 
+   }
+    .navbar-nav .nav-link {
+      text-align: right;
+    }
+    .lang {
+      border-left: unset !important;
+    }
+    .slider-bottom {
+      // right: 13px;
+    }
+    .program-container p .share {
+      padding: 4px 11px 0px 2px;
+      margin: -100px 0 0 45px;
+    }
+    .program-container p .heart {
+      margin: 0 -110px;
+      padding: 4px 9px 3px 0px;
+    }
+    .new-nav-item2 {
+      margin: 0 -54px;
+      padding: 8px 15px;
+    }
+    .custom-dropdown-menu3 {
+      // top: 69%;
+      left: -20%;
+    }
+    .header-search-nav {
+      margin-right: 0 !important;
+    }
+  }
+  .player-counter:first-child {
+    right: 15px;
+  }
+  .player-counter:last-child {
+    left: 15px;
+  }
+  .player-body .item,
+  .program-body .item {
+    border-right: 1px solid #e8e8e8;
+  }
+  .sign-social-media a:first-child {
+    margin-left: 10px;
+  }
+  .pr-0 {
+    padding-left: 0 !important;
+    padding-right: 15px !important;
+  }
+  .pl-0 {
+    padding-right: 0 !important;
+    padding-left: 15px !important;
+  }
+  .second-slider .owl-nav button span {
+    display: block;
+    margin-top: -2px;
+    font-size: 24px;
+  }
+  .ngx-toastr {
+    text-align: right;
+  }
+  .toast-close-button {
+    right: unset;
+    left: -0.3em;
+    top: -0.3em;
+    float: left;
+  }
+  .pr-0 {
+    padding-right: 0 !important;
+  }
+  .main-slider-2 {
+    margin-right: 20px;
+  }
+  .email {
+    text-align: end;
+  }
+  .number {
+    text-align: end;
+  }
+  .dropdown-menu  {
+    left: auto;
+   }
+  .program-description{   direction: rtl !important;
+    text-align: right !important;}
+    .nav-container {
+ 
+      left:  10px !important;
+      margin-inline-start: -140px;
+
+    
+    }
+    
+}

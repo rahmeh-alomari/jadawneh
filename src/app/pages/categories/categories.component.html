@@ -1,0 +1,42 @@
+
+<div appDynamicMeta 
+     [pageTitle]="locale.prefix === 'ar' ? 'استكشف فئات البودكاست العربية على بودكاستي' : 'Explore Arabic Podcast Categories on Podqasti'"
+     [pageDescription]="locale.prefix === 'ar' ? 'تصفح مجموعة متنوعة من فئات البودكاست العربية على بودكاستي. اعثر على البودكاست المثالي لك، من الأخبار والثقافة إلى الكوميديا ​​والمزيد.': 'Browse through a diverse selection of Arabic podcast categories on Podqasti. Find your perfect podcast match, from news and culture to comedy and more.'">
+</div>
+
+
+
+<div class="container">
+  <section class="breadcrumb-page">
+    <div class="sub-header">
+        <h3> {{'Podcast Categories' | translate}}</h3>
+        <ol class="breadcrumb">
+            <li>
+                <a href="javascript:;" [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+            </li>
+            <li> 
+                <a href="javascript:;">&nbsp; {{ 'Categories' | translate }}</a>
+            </li>
+            
+        </ol>
+    </div>
+</section>
+
+<ng-container *ngIf="categories">
+    <section class="custom-section" style="margin-top: 50px ;">
+        <div class="">
+            <div class="row" style="max-width:100%">
+                <ng-container *ngFor="let item of categories">
+                    <div class="col-md-3 col-12">
+                        <app-category-card [category]="item" [locale]="locale"></app-category-card>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </section>
+</ng-container>
+  
+</div>
+
+
+

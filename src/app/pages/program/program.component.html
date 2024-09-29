@@ -1,0 +1,160 @@
+
+
+
+
+<div class="container">
+  <section class="breadcrumb-page">
+    <div class="sub-header">
+      <h3>{{ "Programs" | translate }}</h3>
+      <ol class="breadcrumb">
+        <li>
+          <a href="javascript:;" [routerLink]="['/', locale.prefix]">
+            {{ "Home" | translate }} /
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" [routerLink]="['/', locale.prefix, 'programs']">&nbsp; {{ "Programs" | translate }} /
+          </a>
+        </li>
+        <li *ngIf="program">
+          <a href="javascript:;">&nbsp; {{ program.title }}</a>
+        </li>
+      </ol>
+    </div>
+    <!-- <div *ngIf="program">
+    <p style="padding: 30px 0 0 0;text-align: justify; color:black;"> {{ program.description }}</p>
+    <span>Podcast by: <a class="p"> {{ program.pdcaster }}</a></span>
+  </div> -->
+  </section>
+
+
+
+  <ng-container *ngIf="program">
+
+    <div class="row mt-5">
+      <div class="col-12 col-lg-5 img-container">
+        <img [src]="program.cover" alt="program.image" class="program-img" />
+      </div>
+      <div class="col-12 col-lg-7 des-prog">
+        <div class="header-container ">
+
+          <div class="d-flex align-items-center">
+            <!-- Title at the start -->
+            <h2 style="color: #542779 ;font-weight:bold" class="program-tilte">{{ program.title }}</h2>
+
+            <!-- Button for seasons in the middle -->
+
+          </div>
+          <div class="flex-container">
+
+
+            <div class="dropdown">
+              <ng-container *ngFor="let season of program.seasons">
+                <a class="nav-link dropdown-toggle ses-btn" href="#" role="button" id="dropdownMenuLink"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" *ngIf="season.selected">
+                  {{ season.title}}
+                </a>
+              </ng-container>
+
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <ng-container *ngFor="let season of program.seasons">
+                  <a class="dropdown-item" href="javascript:;" (click)="loadData(null, season)">
+                    {{ season.title }}
+                  </a>
+                </ng-container>
+              </div>
+            </div>
+
+
+            <div class="heart-container ">
+
+
+
+
+
+
+
+              <div class="tooltip-container">
+                <a href="javascript:;" class="heart" (click)="toggleFavorite(program)" (mouseenter)="showTooltip = true"
+                  (mouseleave)="showTooltip = false">
+                  <i class="fa-solid fa-star fa-2xl start"[ngClass]="{'text-danger': program.you_favored_this}" ></i>
+                  <div *ngIf="showTooltip && !program.you_favored_this" class="custom-tooltip customtool" style="z-index: 9999999999999;">
+                    {{'Add To Favourite' | translate}}
+                    <div class="tooltip-arrow"></div>
+                  </div>
+
+                  <div *ngIf="showTooltip && program.you_favored_this" class="custom-tooltip customtool"  style="z-index: 9999999999999;width: max-content; padding: 15px;">
+                    {{'Remove From Favorite' | translate}}
+                    <div class="tooltip-arrow"></div>
+                  </div>
+                
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- Description below them -->
+        <p class="program-description">{{ program.description }}</p>
+      </div>
+
+    </div>
+    <div>
+
+    </div>
+
+    <section class=" card-body  mt-5" style="margin: auto;">
+      <div class="heading-container py-4 px-2">
+        <h2 style="color:#524779 ;font-weight: bold;">
+          {{ "Episodes" | translate }}
+        </h2>
+        <p *ngIf="program" class="mx-5">
+          {{ "EpisodeCount" | translate }} : {{program.episode_count}}
+        </p>
+      </div>
+      <!-- <form class="form-inline mt-3">
+        <div class="input-wrapper">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </div>
+      </form> -->
+
+      <!-- <form [formGroup]="form" (ngSubmit)="onSearch()">
+          <i class="fa fa-search" (click)="onSearch()" style="color: #542779"></i>
+          <input class="form-control header-search" type="search" placeholder="{{ 'Search' | translate }}"
+            aria-label="Search" [formControlName]="'keyword'" />
+        </form> -->
+      <!-- Episodes Section -->
+      <div class="custom-scrollbar" style="max-width: 70em; overflow-x: auto; margin: auto;">
+        <app-episodes-table [locale]="locale" [episodes]="program.episodes" style="width: 100%"></app-episodes-table>
+        <!-- Broadcasters Section -->
+        <!-- <div class="col-md-4">
+        <ng-container *ngIf="program.broadcaster">
+          <div class="d-flex align-items-center">
+            <app-podcaster-card [broadcaster]="program.broadcaster" [locale]="locale"></app-podcaster-card>
+          </div>
+        </ng-container> -->
+        <!-- Display Broadcasters -->
+        <!-- <section class="broadcasters-section" *ngIf="program.broadcasters && program.broadcasters.length > 0">
+          <div class="container">
+            <h4>{{ 'Podcasters' | translate }}</h4>
+            <div class="row">
+              <div class="col-md-6" *ngFor="let broadcaster of program.broadcasters">
+                <div class="broadcaster-card">
+                  <img [src]="broadcaster.image" alt="{{ broadcaster.title }}" class="broadcaster-image">
+                  <h5 style="
+                  text-align: center;
+              ">{{ broadcaster.title }}</h5>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <!-- </div>
+    </div> -->
+        <!---->
+      </div>
+    </section>
+  </ng-container>
+</div>

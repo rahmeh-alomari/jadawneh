@@ -1,0 +1,181 @@
+{
+    "Home" : "Home",
+    "Programs" : "Podcasti Programs",
+    "Categories" : "Categories",
+    "Category" : "Category",
+    "About Us" : "About Us",
+    "Send a Message" : "Send a Message",
+"Podcast Categories": "Podcast Categories",
+    "Contact Us" : "Contact Us",
+    "Sign in" : "Sign in",
+    "New account" : "New Account",
+    "Create one" : "Create one",
+    "Subscribe" : "Subscribe",
+    "Follow Us" : "Follow Us",
+    "Most listened to episodes" : "Most listened to episodes",
+    "Podcast" : "Podcast",
+    "Enter Your Email" : "Enter Your Email",
+    "Footer Slug" : "At Podqasti, we offer a wide range of programmes through a group of dedicated and talented podcasters raising awareness and shedding light on the various challenges and topics facing our world today.",
+    "Copyright": "Copyright",
+    "All rights reserved | By": "All rights reserved | By",
+    "Namaa Solutions": "Namaa Solutions",
+    "Program": "Channel",
+    "Episodes": "Podcasts",
+    "Episode": "Podcast",
+    "Ourcontent": "Our Content",
+    "Episode Details": "Podcast Details",
+    "Episodes count": "Number of Podcasts",
+    "Listen": "Listen",
+    "EpisodeCount": "Episode Count",
+    "Duration": "Duration",
+    "Latest Episodes": "Latest",
+    "Just For You": "Selected for you",
+    "Download App": "Download App",
+    "App Name": "Podqasti",
+    "app description line 1": "Podqasti is a platform through which we persent content.",
+    "app description line 2": "Exclusive and original arabic for our listeners",
+    "Explore": "Discover",
+    "Blogs": "Blogs",
+
+    "Most Listened": "Most Popular",
+    "Our vision is to be the go-to platform for Arab listeners and content creators, offering innovative and culturally relevant podcasts.": "Our vision is to be the go-to platform for Arab listeners and content creators, offering innovative and culturally relevant podcasts.",
+    "Our team consists of talented and passionate hosts and producers committed to storytelling excellence. By leveraging cutting-edge technology and innovative production techniques, we ensure the highest audio standards.": "Our team consists of talented and passionate hosts and producers committed to storytelling excellence. By leveraging cutting-edge technology and innovative production techniques, we ensure the highest audio standards.",
+    "Our mission is to foster a vibrant podcasting ecosystem in the region while raising awareness by producing quality content and spotlighting critical challenges facing our world today.": "Our mission is to foster a vibrant podcasting ecosystem in the region while raising awareness by producing quality content and spotlighting critical challenges facing our world today.",
+
+    "See More": "See More",
+    "Podcasters": "Podcasters",
+    "Welcome to Podqasti!": "Welcome to Podqasti!",
+    "As a leading podcast production company and platform, Podqasti is dedicated to amplifying voices from the Arab world through high-quality, diverse, and engaging content. ": "As a leading podcast production company and platform, Podqasti is dedicated to amplifying voices from the Arab world through high-quality, diverse, and engaging content.",
+    "We specialize in producing podcasts that cover a wide range of subjects, including compelling stories, educational insights, and entertainment that resonates with our audience.": "We specialize in producing podcasts that cover a wide range of subjects, including compelling stories, educational insights, and entertainment that resonates with our audience.",
+    "Install the application now": "Install the application now",
+    "Podcaster": "Podcaster",
+    "Podcast by": "Podcast by",
+    "Follow": "Follow",
+    "Latest programs": "Latest Channels",
+    "Seasons": "Season",
+    "Category Details": "Category Details",
+    "Amman , Meccast - Makkah Towers":"Amman , Meccast - Makkah Towers",
+    "Sign in your account": "",
+    "© 2023 Podcasti.. All rights reserved": "© 2023 Podcasti.. All rights reserved",
+    "Create new account": "Create new account",
+    "Don't have account Account?": "Don't have an account?",
+    "Has Account?": "Has Account?",
+    "Broadcasters": "Broadcasters",
+    "Submit": "Submit",
+    "Submitreg": "Submit",
+    "Sign in with Google": "Sign in with Google",
+    "Or you can register by": "Or you can register by",
+    "Register Using": "Sign in Using",
+    "Most popular": "Most popular",
+    "type your full name": "type your full name",
+    "type your full Email": "type your full Email",
+    "type your full Password": "type your full Password",
+"Search in Programs": "Search in Programs",
+    "Search in Content Creators ": "Sreach in podcaster",
+    "Search in episodes": "Search in episodes",
+
+
+
+
+
+    "Sorry, we couldn’t find any results for your search. Feel free to explore other topics.": "Sorry, we couldn’t find any results for your search. Feel free to explore other topics.",
+
+
+
+
+
+    "Sign in Using": "Sign in Using",
+    "SHARE SOME LOVE": "SHARE SOME LOVE",
+    "Search": "Search",
+    "Add To Favourite": "Add To Favourite",
+    "Share": "Share",
+    "Logout": "Logout",
+    "Favorite": "Favourite",
+    "Account": "Account",
+    "Settings": "Settings",
+    "Update Account": "Update Account Details",
+    "Change Password": "Security Settings",
+    "UNSPECIFIED": "Unspecified",
+    "MALE": "Male",
+    "FEMALE": "Female",
+    "Send Us a Message": "Send Us a Message",
+    "Episods": "Podcasts",
+    "Name": "Name",
+    "Full name": "Full Name",
+    "Email": "Email",
+    "Password": "Password",
+    "Password Confirmation": "Password Confirmation",
+    "Remove From Favorite": "Remove From Favourite",
+    "Send Massage For US": "Send Massage For US",
+    "Write a message and we will contact you as soon as possible": "Write a message and we will contact you as soon as possible",
+
+    "Program Details": "Channel Details",
+    "About Podcaster": "About Podcaster",
+    "Unfollow": "Unfollow",
+    "Programs Count": "Number of Channels",
+    "Load More": "Load More",
+    "Our Mission": "Our Mission",
+    "Our Vision": "Our Vision",
+    "blog": "Blog's",
+    "OurService":"Our Services",
+
+    "ContentCreator": "Content Creator",
+    "Cancel": "Cancel",
+    "101001": {
+        "title": "Success",
+        "text" : "You are now logged in"
+    },
+    "102005": {
+        "title": "Success",
+        "text" : "Added to favourite"
+    },
+    "102006": {
+        "title": "Success",
+        "text" : "Removed from favourite"
+    },
+    "002030": {
+        "title": "Success",
+        "text" : "Added to favourite"
+    },
+    "002040": {
+        "title": "Success",
+        "text" : "Removed from favourite"
+    },
+    "101003": {
+        "title": "Success",
+        "text" : "Logged out successfully"
+    },
+    "000004": {
+        "title": "Sign in Required",
+        "text" : "You need to be logged in to perform this action"
+    },
+    "001005": {
+        "title": "Sorry",
+        "text" : "This email is registered using a different social media account"
+    },
+    "001003": {
+        "title": "Sorry",
+        "text" : "Please make sure you have entered a correct information"
+    },
+    "105009": {
+        "title": "Success",
+        "text" : "You have successfully subscribed to the newsletter"
+    },
+    "422": {
+        "title": "Invalid fields",
+        "text" : "Some of the information entered is invalid. Please make sure to enter correct information"
+    },
+    "107001": {
+        "title": "Success",
+        "text" : "You have successfully uploaded a voice file"
+    },
+    "Current Password": "Current Password",
+    "New Password": "New Password",
+    "New Password Confirmation": "New Password Confirmation",
+    "Enter email address": "Enter email address",
+    "Subscribe Us": "Subscribe",
+    "Send Us Record": "Record Your Sample",
+
+    "Download Recording": "Download",
+    "Record": "Record"
+}

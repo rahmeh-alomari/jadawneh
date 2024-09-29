@@ -1,0 +1,7 @@
+body.has-rtl .login-form select {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}

@@ -1,0 +1,202 @@
+.loader {
+  position: fixed; /* or use 'absolute' depending on your layout needs */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* Set white background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure loader is on top of other content */
+}
+
+.middle {
+  text-align: center;
+}
+
+
+.nav-link{
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.bar {
+  width: 10px;
+  height: 70px;
+  background: #fff;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
+  animation: loader 1s linear infinite;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+.map {
+  display: block;
+  white-space: pre-line; /* Allows line breaks within the text */
+}
+.rounded-social-buttons .social-button{
+  // text-align: center;
+  margin-inline-end: 8px;
+}
+.dropdown-item:active {
+color: #542779;
+  background-color: #fff;
+}
+.meune h5:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.dropdown-menu {
+  top: 70% !important}
+.footer-heading a{
+  color: #ffff
+}
+.footer-02 .footer-heading {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.menue-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Optional: Adds space between the items */
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+ 
+  padding-left: 0.3rem !important;
+
+}
+
+.new-account:hover {
+background-color: #F5EFFB;
+color: #542779 !important;
+// margin: 10px;
+}
+
+/* Adjust layout for small screens */
+@media (max-width: 576px) {
+  .menue-footer h5 {
+    flex: 0 0 28%; /* Each <h5> will take approximately half of the container width */
+    margin-bottom: 10px; /* Optional: Adds space below each item */
+  }
+  .footer-02 .center-fotter{
+    margin: auto;
+    padding-block-start: 40px;
+    text-align: center;
+  }
+  .menue-footer {
+   justify-content: center;
+  }
+  .mr-auto-s,
+.mx-auto {
+  margin-left: auto;
+  margin-inline-start: 30px !important;
+}
+}
+
+.menue-footer h5 a{
+  display: flex;
+  margin: 10px;
+}
+.p-underline{margin-top: -10px;}
+.footer-02 .row {
+  max-width:  80%;
+}
+
+.bar1 {
+  animation-delay: 0.1s;
+}
+.bar2 {
+  animation-delay: 0.2s;
+}
+.bar3 {
+  animation-delay: 0.3s;
+}
+.bar4 {
+  animation-delay: 0.4s;
+}
+.bar5 {
+  animation-delay: 0.5s;
+}
+.bar6 {
+  animation-delay: 0.6s;
+}
+.bar7 {
+  animation-delay: 0.7s;
+}
+.bar8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
+    background: #542779 0% 0% no-repeat padding-box;
+  }
+  50% {
+    transform: scaleY(1);
+    background: #542779 0% 0% no-repeat padding-box;
+  }
+  100% {
+    transform: scaleY(0.1);
+    background:#542779 0% 0% no-repeat padding-box;
+  }
+}
+.wrapper {
+  height: -webkit-fill-available;
+      display: flex;
+      flex-direction: column;
+      height: 60%;
+    }
+
+
+
+.content {
+  flex: 1;
+}
+
+.footer-02 {
+  background: url('../../assets/podcasti/images/footer.png') no-repeat ; 
+  background-position: center center; /* Center the image */
+  background-size: cover; /* Ensures the entire image is visible */
+  bottom: 0;
+  width: 100%;
+  color: white; /* Adjust text color for readability */
+}
+.bg-dark{
+  width: auto !important;
+}
+.s{
+  display: block;
+  margin: 0 auto; /* Center horizontally */
+
+}
+
+.header-search-nav {
+  margin-inline-start: -100px;
+}
+
+
+
+
+
+
+
+
+/* Adjust layout for small screens */
+@media (min-width: 980px) {
+ 
+ul {
+  margin-left: .1rem;
+}
+.lang-dir{
+  margin-inline-start: 130px !important;
+ }
+ 
+}
+

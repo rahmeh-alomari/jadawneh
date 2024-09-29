@@ -1,0 +1,140 @@
+app-mini-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000000d2;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.mini-player {
+    padding: 20px;
+    display: flex;
+    color: #fff;
+}
+
+.mini-player-close {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border: 5px solid #000000d2;
+}
+
+.mini-player-close:hover {
+    color: #ffb95f;
+}
+
+.player-content {
+    float: right;
+    min-width: 347px;
+}
+
+.player-image {
+    width: 80px;
+    float: right;
+
+    img {
+        border-radius: 5px;
+    }
+}
+
+.player-data {
+    float: right;
+    h4 {
+        margin: 7px 10px;
+        text-align: right;
+        color: #fff;
+    }
+    p {
+        margin: 7px 10px;
+        text-align: right;
+        color: #fff;
+    }
+}
+
+.player-icon {
+    float: right;
+    a {
+        padding: 14px 21px 14px 25px;
+        margin-top: 5px;
+        display: block;
+    }
+    a.mini-pause {
+        padding: 14px 16px 14px 25px;
+    }
+}
+
+.mini-title {
+    color: #fff;
+}
+.mini-title:hover {
+    color: #ffb95f;
+}
+
+@media(max-width: 687px) {
+    
+    app-mini-player {
+        max-width: 91%;
+    }
+
+    .player-content {
+        display: contents;
+    }
+
+    .player-data h4 {
+        font-size: 14px;
+    }
+
+    .player-data p {
+        font-size: 12px;
+    }
+}
+
+body.has-ltr {
+    app-mini-player {
+        right: unset;
+        left: 20px;
+    }
+        
+    .mini-player-close {
+        right: unset;
+        left: -10px;
+    }
+        
+    .player-content {
+        float: left;
+        min-width: 347px;
+    }
+    
+    .player-image {
+        float: left;
+    }
+    
+    .player-data {
+        float: left;
+        h4 {
+            text-align: left;
+        }
+        p {
+            text-align: left;
+        }
+    }
+    
+    .player-icon {
+        float: left;
+        a {
+            padding: 14px 21px 14px 22px;
+            margin-top: 5px;
+            display: block;
+        }
+        a.mini-pause {
+            padding: 14px 16px 14px 20px;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+@media (min-width: 1450px) {
+    .image-link img {
+        height: auto !important;
+        box-shadow: 0 0px 8px 3px #e9e9e9;
+        min-width: 150px !important;
+    }
+    .pod-card {
+        width: 230px !important;
+        min-height: 50px;
+        padding: 20px;
+     
+    }
+    img{
+        max-width: 45%;
+       
+    }
+    // .parent{
+    //  margin-inline-start: 100px !important;
+    // }
+}
+// .parent{
+//     margin-inline-start: 20px;
+//    }
+
+// @media (max-width: 992px) {
+//     .image-link img {
+//         height: auto !important;
+//         box-shadow: 0 0px 8px 3px #e9e9e9;
+//         min-width: 150px !important;
+//     }
+// }
+.pod-card {
+    width: max-content;
+    min-height: 50px;
+    min-width: 270px
+ 
+}
+
+img.card-pod-img-top.img-fluid {
+    max-width: fit-content;
+    width: 120px !important;
+   
+}
+.pod-card {
+
+    padding: 20px;
+ 
+}
+.podcaster-name{
+    border: 1px solid #FAF7FD;
+    padding: 30px 10px 90px;
+    height: 160px !important;
+    // min-width: 190px;
+    background-color: #FAF7FD;
+    border-radius: 16px;
+    color: #542779;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    box-shadow: 0px 0px 8px 4px #e9e9e9;
+
+}
+.item{
+    margin: 45px 25px !important; }
+.item-card{
+    box-shadow: 0px 0px 8px 4px #e9e9e9 !important;
+    margin: 20px 55px !important; 
+}
+.card-pod-img-top{
+    margin: 20px !important;
+    margin-top: -70px !important;}
+
+    
+
+    @media (max-width: 595px) {
+        .image-link img {
+            height: auto !important;
+            box-shadow: 0 0px 8px 3px #e9e9e9;
+            min-width: 150px !important;
+        }
+        .pod-card {
+            width: 250px;
+            min-height: 50px;
+            margin:-55px auto !important;
+            text-align: center;
+            // margin-inline-start: 10px;
+        }
+      
+        .card-pod-img-top {
+            // margin: 10px 130px !important ;
+            margin-top: -70px !important;
+        }
+    }
+
+
+    

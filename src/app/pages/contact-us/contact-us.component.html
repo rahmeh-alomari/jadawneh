@@ -1,0 +1,97 @@
+<div appDynamicMeta 
+     [pageTitle]="locale.prefix === 'ar' ? 'تواصل مع بودكاستي: تواصل مع فريقنا' : 'Contact Podqasti: Get in Touch with Our Team'"
+     [pageDescription]="locale.prefix === 'ar' ? 'لديك سؤال أو تحتاج إلى مساعدة؟ تواصل مع فريق دعم بودكاستي للحصول على مساعدة في رحلتك في البودكاست. نحن هنا للمساعدة!' : 'Have a question or need assistance? Contact Podqasti\'s support team for help with your podcasting journey. We\'re here to help!'">
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <section class="breadcrumb-page breadcrumb-page-pb-120">
+    <div class="sub-header">
+        <h3>{{ 'Contact Us' | translate }}</h3>
+        <ol class="breadcrumb">
+            <li>
+                <a href="javascript:;" [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+            </li>
+            <li>
+                <a href="javascript:;">&nbsp; {{ 'Send Us a Message' | translate }} </a>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<ng-container>
+
+
+
+
+
+
+<div class="container">
+    <div class="row " style="margin-top:  30px;">
+        <!-- <div class="col-md-12 col-12 color-logo">
+            <a [routerLink]="['/', locale.prefix]">
+                <img src="assets/podcasti/images/color-logo.png" alt="">
+            </a>
+        </div> -->
+        <div class="col-md-8 col-12 card" style="margin: auto;margin-bottom: 30px;padding:40px 40px 80px">
+            <h5 class="main-title-4 ">
+                {{ 'Sign in your account' | translate }}
+                {{ 'Send Massage For US' | translate }}
+
+                <!-- <span>{{ 'new account' | translate }}</span> -->
+            </h5>
+            <!-- <h5 class="main-title-3">
+                {{ 'Sign in' | translate }}
+                <span>{{ 'Sign in your account' | translate }}</span>
+            </h5> -->
+            <div class="login-form">
+                <form [formGroup]="form">
+                 
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text input-group-text-2" id="subject"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        </div>
+                        <input name="email" type="text" [formControlName]="'email'" appValidateInputDirective="Email is required" class="form-control form-control-2" placeholder="{{ 'Email' | translate }}" aria-label="email" aria-describedby="email">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text input-group-text-2" id="subject"><i class="fa fa-user " aria-hidden="true"></i></span>
+                        </div>
+                        <input name="sender" type="text" appValidateInputDirective="Name  is required" [formControlName]="'sender'" class="form-control form-control-2" placeholder="{{ 'Name' | translate }}" aria-label="name" aria-describedby="name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text input-group-text-2" id="subject"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                        </div>
+                        <input name="subject" type="text" [formControlName]="'subject'" appValidateInputDirective="Name  is required"  class="form-control form-control-2" placeholder="{{ 'Subject' | translate }}" aria-label="subject" aria-describedby="subject">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text input-group-text-2" id="message"></span>
+                        </div>
+                        <textarea name="message" style="border: unset !important;" type="text" [formControlName]="'message'" appValidateInputDirective="Name  is required"  class="form-control form-control-2" placeholder="{{ 'Write a message and we will contact you as soon as possible' | translate }}" aria-label="Message" aria-describedby="Message" rows="5"></textarea>
+                    </div>
+                    <button 
+                    [disabled]="form.invalid"
+                        (click)="send()"
+                        type="button" 
+                        class="btn btn-primary btn-lg btn-block submit-btn">
+                        {{ 'Submit' | translate }}
+                    </button>
+                </form>
+
+           
+            </div>
+        </div>
+ 
+    </div>
+</div>
+

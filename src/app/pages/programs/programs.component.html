@@ -1,0 +1,79 @@
+<div appDynamicMeta 
+     [pageTitle]="locale.prefix === 'ar' ? 'برامج بودكاستي: بودكاست عربية متنوعة لكل مستمع' : 'Podqasti Programs: Diverse Arabic Podcasts for Every Listener'"
+     [pageDescription]="locale.prefix === 'ar' ? 'اعثر على البودكاست العربية المفضلة التالية على بودكاستي. استكشف مجموعة واسعة من البرامج عبر فئات مختلفة، من الأخبار والثقافة إلى الكوميديا ​​والتطوير الذاتي.' : 'Find your next favorite Arabic podcast on Podqasti. Explore a wide range of programs across various categories, from news and culture to comedy and self-improvement.'">
+</div>
+
+
+<div class="container">
+    <section class="breadcrumb-page">
+        <div class="sub-header">
+            <h3>{{ 'Programs' | translate }}</h3>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="javascript:;" [routerLink]="['/']"> {{ 'Home' | translate }} / </a>
+                </li>
+                <li>
+                    <a href="javascript:;">&nbsp; {{ 'Programs' | translate }}</a>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="custom-section" *ngIf="chaneelsData">
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-6 col-lg-3 col-12" *ngFor="let item of chaneelsData">
+                    <a [routerLink]="['/', locale?.prefix || 'en', 'program', item.id]" class="link">
+                        <div class="item card mt-3 mr-1 ml-1 item-card">
+                            <div class="image-link">
+                                <div class="image-container"
+                                   >
+                                    <img *ngIf="!item.imageLoaded" class="loader-img"
+                                        src="../../../assets/podcasti/images/color-logo.png" alt="Loading...">
+                                    <img *ngIf="item.image" class="card-img-top" [src]="baseImageUrl + item.image"
+                                        (load)="onImageLoad(item)">
+                                </div>
+                                <div class="color-overlay">
+                                    <div class="card-icon item-nav">
+                                        <i aria-hidden="true" class="fa fa-ellipsis-v"></i>
+                                        <div>
+                                            <ul class="dropdown-menu custom-dropdown-menu">
+                                                <a href="javascript:;" class="dropdown-item">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <span>{{ 'Add To Favourite' | translate }}</span>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a [routerLink]="['/', locale?.prefix || 'en', 'program', item.id]"
+                                        class="play-icon">
+                                        <i class="fas fa-play"></i>
+                                    </a>
+                                    <a href="javascript:;" class="card-icon" (click)="toggleFavorite(item)">
+                                        <i aria-hidden="true" class="fa-solid fa-star"
+                                            [ngClass]="{'text-danger': item.you_favored_this}"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body pod-body">
+                                <h5 class="card-title">{{ item.title }}</h5>
+                                <p class="p-info">{{ stripHtmlTags(item.description) }}</p>
+                                <!-- <span>Podcast by: <a class="p">{{ item.title }}</a></span> -->
+                                <ul class="list-inline m-0 card-ul">
+                                    <li class="program-icons">
+                                        <!-- <i class="far fa-heart"></i>{{ item.favoredBy }} -->
+                                        <span class="comments"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-programs m-5">
+            <button (click)="nextPage()">{{ 'See More' | translate }}</button>
+        </div>
+    </section>
+</div>

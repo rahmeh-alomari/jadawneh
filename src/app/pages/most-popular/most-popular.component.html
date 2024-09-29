@@ -1,0 +1,64 @@
+<div class="container">
+    <section class="breadcrumb-page">
+    <div class="sub-header">
+        <h3> {{'Most popular' | translate}}</h3>
+        <ol class="breadcrumb">
+            <li>
+                <a href="javascript:;"  [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+            </li>
+            <li>
+                <a href="javascript:;">&nbsp; {{'Most popular' | translate}}</a>
+            </li>
+        </ol>
+    </div>
+    </section>
+
+<section class="custom-section" *ngIf="popularData">
+    <div class="container"><div class="row">
+        <div class=" col-md-6 col-lg-3 col-12" *ngFor="let item of popularData">
+            <a class="link" ng-reflect-router-link="/,en,episode,{{item.id}}"[routerLink]="['/', locale.prefix, 'episode', item.
+            episodeId]" >
+                <div class="item card mt-3 mr-1 ml-1 item-card">
+                    <div href="#" class="image-link">
+                        <div class="image-container">
+                            <img *ngIf="!item.imageLoaded" class="loader-img" src="../../../assets/podcasti/images/color-logo.png" alt="Loading...">
+                            <img class="card-img-top" [src]="item.imageUrl" alt="{{ item.title }}" (load)="onImageLoad(item)">
+                        </div>
+                        
+                    
+                        <div class="color-overlay">
+                            <div href="category-nav" class="card-icon item-nav"><i aria-hidden="true"
+                                    class="fa fa-ellipsis-v"></i>
+                                <div>
+                                    <ul class="dropdown-menu custom-dropdown-menu"><a href="javascript:;"
+                                            class="dropdown-item"><i class="fa-solid fa-star"></i><span>Add To
+                                                Favorite</span></a></ul>
+                                </div>
+                            </div><a class="play-icon" ng-reflect-router-link="/,en,program,{{item.id}}"
+                            [routerLink]="['/', locale.prefix, 'program', item.
+                            episodeId]"><i class="fas fa-play"></i></a><a href="javascript:;"
+                                class="card-icon"><i aria-hidden="true" class="fa-solid fa-star"
+                                    ng-reflect-ng-class="[object Object]"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body pod-body">
+                        <h5 class="card-title"> {{ item.title }}</h5>
+                        <p class="p-info">{{ item.description }}</p><!--bindings={
+                "ng-reflect-ng-if": "true"
+              }--><span>Podcast by: <a class="p"> {{ item.broadcaster.title }}</a></span><!--bindings={
+                "ng-reflect-ng-if": "[object Object]"
+              }-->
+                        <ul class="list-inline m-0 card-ul">
+                            <li class="program-icons"><i class="far fa-heart"></i>{{ item.favoredBy}} <span class="comments"></span></li>
+                        </ul><!--bindings={
+                "ng-reflect-ng-if": "true"
+              }-->
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div></div>
+    
+</section>
+</div>

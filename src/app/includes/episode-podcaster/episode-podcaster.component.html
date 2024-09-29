@@ -1,0 +1,19 @@
+<div  style="text-align: center;">
+  <h1  class="mb-4 podcaster-name"> {{broadcaster.title | translate}} </h1>
+    <div>
+  
+      <a [routerLink]="[
+          '/',
+          locale.prefix,
+          'podcaster',
+          broadcaster.broadcaster_id
+        ]" class="image-link">
+        <img class="card-pod-img-top img-fluid" [src]="broadcaster.image" alt=""/>
+        <!-- <div class=" pod-card">
+          <h4 class="podcaster-name">
+            {{ broadcaster.title }}
+          </h4>
+        </div> -->
+      </a>
+    </div>
+  </div>

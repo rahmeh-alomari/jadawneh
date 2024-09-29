@@ -1,0 +1,71 @@
+<!-- <p *ngIf="episode == null">Loading</p>
+<p *ngIf="episode == false">Error</p>
+<p *ngIf="episode">Loaded</p> -->
+
+<!-- <ng-container *ngIf="episode">
+    <Search in Content Creators  [episode]="episode"></app-player>
+</ng-container> -->
+
+
+
+<div appDynamicMeta 
+     [pageTitle]="locale.prefix === 'ar' 
+        ? episode.title + ' من ' + episode.program_title + ' بودكاست عربية على بودكاستي' 
+        : episode.title + ' from ' + episode.program_title + ' on Podqasti'"
+     [pageDescription]="locale.prefix === 'ar' 
+        ? 'استمع إلى ' + episode.title + ' من ' + episode.program_title + ' على بودكاستي. ' + (episode.description?.substring(0, 30) || '') + '...' 
+        : 'Listen to ' + episode.title + ' from ' + episode.program_title + ' on Podqasti. ' + (episode.description?.substring(0, 30) || '') + '...'">
+</div>
+
+
+
+
+<div class="container">
+    <section class="breadcrumb-page">
+  <div class="sub-header">
+      <h3>{{ episode.title }}</h3>
+      <ol class="breadcrumb">
+          <li>
+              <a href="javascript:;" [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+          </li>
+          <ng-container *ngIf="episode">
+              <li>
+                  <a href="javascript:;" [routerLink]="['/', locale.prefix, 'program', episode.program_id]">&nbsp; {{ episode.program_title }} / </a>
+              </li>
+              <li>
+                  <a href="javascript:;">&nbsp; {{ episode.title }}</a>
+              </li>
+          </ng-container>
+      </ol>
+  </div>
+</section>
+
+<ng-container *ngIf="episode">
+    <section >
+        <div class="row ">
+            <div class="col-12 col-md-9 " >
+                <h3 style="font-weight: bold;color: #524779;text-align: start;" class="mb-3 Podcaster-tilt"> {{'Episode Details' | translate}}</h3>
+                
+                <p class="justified-text">
+                    {{ episode.description }}
+                </p>
+            </div>
+            <div class="col-md-3">
+                <!-- <h3 style=" " class="mb-4 Podcaster-tilt"> {{'Podcaster' | translate}} </h3> -->
+
+                <app-episode-podcaster  [broadcaster]="episode.broadcaster" [locale]="locale"></app-episode-podcaster>
+            </div>
+        </div>
+    </section>
+  <app-player
+      [locale]="locale"
+      
+      [episode]="episode"
+      (onStateChanged)="onStateChanged($event)"
+      (onManuelStateChanged)="onManuelStateChanged($event)">
+  </app-player>
+
+
+</ng-container>
+
+</div>

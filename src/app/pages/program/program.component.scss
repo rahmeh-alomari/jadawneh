@@ -1,0 +1,298 @@
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.program-img {
+  border-radius: 8%;
+  object-fit: cover;
+  margin-top: 40px;
+  width: 300px;
+  height: 340px;
+
+}
+
+.broadcaster-image {
+  border-radius: 50%;
+}
+
+.flex-container {
+  display: flex;
+  /* Align items vertically centered */
+
+}
+
+.program-details {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.des-prog {
+  margin: auto;
+}
+
+a:hover {
+
+  text-decoration: none;
+}
+
+.new-icons {
+  background: #8d278a;
+  border-radius: 50px;
+  padding: 4px 15px;
+  color: #fff;
+
+}
+
+.flex-container>a {
+  margin-right: 10px;
+  /* Add some space between the items */
+}
+.align-items-center {
+  min-width: 57% !important;
+}
+.program-description {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  /* Preserve whitespace but allow wrapping */
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  text-align: justify !important;
+    // text-align-last: justify !important;
+// max-width: 81%;
+
+}
+
+.program-body h2 {
+  text-align: start;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  
+  justify-content: space-between;
+  /* Adjusts space between items */
+  /* Adjust as needed */
+}
+
+.dropdown-container {
+  display: flex;
+  align-items: center;
+}
+
+.ses-btn{
+  background-color: #92288F !important;
+  color: #fff;
+  margin: 30px 20px !important;
+  padding: 10px 33px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.new-icons {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  display: flex;
+  align-items: center;
+}
+
+.fa-chevron-down {
+  padding-left: 10px;
+  /* Adjust as needed */
+}
+
+.fa-star {
+  font-size: 2em;
+  /* Adjust as needed */
+}
+
+.text-warning {
+  color: #ffc107;
+  /* Adjust as needed */
+}
+
+
+.card-body {
+  width:56.313em
+
+}
+.text-warning{
+  font-size: 24px;
+}
+.program-tilte{
+  color: #542779 ;font-weight:bold;font-size: 32px !important;
+}
+@media (max-width: 802px) {
+  .card-body {
+    width: auto;
+
+  }
+
+}
+
+
+@media (max-width: 740px) {
+ .header-container{
+  display: block !important;
+ }
+ .flex-container{
+  margin-inline-start: 1px !important;
+ }
+ .heart-container{
+  margin-inline-end: 100px;
+ }
+}
+.card-body {
+  padding: 10 10px 10px 10px;
+  // margin-inline-start: 11%;
+}
+
+.row {
+  margin: 0 !important;
+  // padding-inline-start: 9% !important
+
+}
+.heading-container {
+  display: flex;
+  align-items: center;
+}
+.heading-container h2 {
+  margin: 0;
+  // padding-right: 10px;
+}
+.heading-container p {
+  margin: 0 auto;
+}
+
+.form-control{
+  border-radius: 9.5px;
+ 
+}
+@media only screen and (min-width: 40.0625em) {
+  h2 {
+    font-size: 32px;text-align: start !important;
+  }
+  .flex-container{
+   
+    //margin-inline-start: 130px;
+    margin-top: 15px;
+  
+  }
+  .form-control{
+    max-width: 437px;
+    width: 437%;
+  }
+}
+.new-nav-icon {
+  background: #524779;
+  border-radius: 50px;
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally, if needed */
+  width: 160px;
+  height: 45px;
+  color: #fff;
+  margin: 30px !important;
+}
+
+.new-nav-icon i {
+  color: #fff;
+}.new-nav-icon{
+  background: #92288F !important;
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  .heart-container {
+    position: relative;
+   margin-top: -20px;
+    font-size: xx-large;
+    margin-inline-start: 1px;
+    
+}
+.new-nav-item2 {
+
+   padding: 0px !important
+}
+
+.custom-tooltip {
+  position: absolute;
+  bottom: 1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  // background-color: #F5F5F5;
+  color: #542779;
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally, if needed */   height: 40px;
+  // width: 144px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 3px;
+  white-space: nowrap;
+
+  box-shadow: 0 0 10px rgba(6, 3,3,0.25);
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+  
+  .tooltip-arrow {
+    position: absolute;
+    top: 100%; /* Position the arrow at the bottom of the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #FFFFFF transparent transparent transparent; /* Arrow pointing down */
+  }
+  
+  .tooltip-container .heart {
+    text-decoration: none;
+  }
+  
+  .heart i {
+    font-size: 24px; /* Adjust icon size as needed */
+    /* Default color of the icon */
+  }
+  .start {
+    font-weight: 1 !important;
+    color:#F3CC30;
+  }
+  
+  .start:hover{
+     font-weight: 900 !important;
+     color:#F3CC30;
+  } .breadcrumb-page {
+
+    color: #fff;
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .row {
+      margin: auto !important;
+      padding-inline-start: 100px;
+  }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .heart-container {
+   
+      margin-inline-start: -10px;
+      
+  }
+  }
+
+    
+  @media only screen and (min-width:1200px) {
+    .breadcrumb-page {
+      padding: 30px 115px  !important;
+      /* background: #ffffff 0% 0% no-repeat padding-box; */
+      color: #fff;
+    }
+  }

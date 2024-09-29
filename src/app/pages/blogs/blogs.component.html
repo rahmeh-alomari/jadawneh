@@ -1,0 +1,49 @@
+<div appDynamicMeta 
+     [pageTitle]="locale.prefix === 'ar' ? 'مدونة بودكاستي: رؤى وإلهام لمنشئي البودكاست العرب' : 'Podqasti Blog: Insights & Inspiration for Arabic Podcasters'"
+     [pageDescription]="locale.prefix === 'ar' ? 'ابق على اطلاع واستلهم بأحدث نصائح البودكاست وأخبار الصناعة وقصص النجاح على مدونة بودكاستي.' : 'Have a question or need assistance? Contact Podqasti\'s support team for help with your podcasting journey. We\'re here to help!'">
+</div>
+
+
+
+<div class="container">
+
+
+  <section class="breadcrumb-page breadcrumb-page-pb-120">
+    <div class="sub-header">
+        <!-- <h3>{{ 'Podcast' | translate }}</h3> -->
+        <h3>{{ 'Blogs' | translate }}</h3>
+
+        <ol class="breadcrumb">
+            <li>
+                <a href="javascript:;" [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+            </li>
+            <li>
+                <a href="javascript:;">&nbsp; {{'Blogs' | translate}}</a>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- <div style="text-align: start" class="abouts-us-tiltle">
+  <h3 style="font-weight: bold;color: #524779;">
+      {{'Blogs' | translate}}
+  </h3>
+</div> -->
+
+<div class="container">
+   <div *ngFor="let blog of blogData" class="card">
+    <img src="../../../assets/podcasti/images/Blogs-img.png" alt="Blogs-img" class="Blogs-img"/>
+    <h4 class="Blogs-title">{{locale.name=='Arabic'? blog.title_ar:blog.title_en }}</h4>
+  <br>
+  <p class="Blogs-des">{{ locale.name=='Arabic'?  blog.content_ar:blog.content_en }}</p>
+  </div>
+</div>
+   
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,86 @@
+<div appDynamicMeta  *ngIf="category"
+     [pageTitle]="locale.prefix === 'ar' 
+        ? ' بودكاست عربية في فئة ' + category.title + ' على بودكاستي' 
+        : category.title + ' Arabic Podcasts on Podqasti'"
+     [pageDescription]="locale.prefix === 'ar' 
+        ? 'انغمس في عالم البودكاست العربية في فئة ' + category.title + ' على بودكاستي. اكتشف برامج آسرة وقصصًا ملهمة تلبي اهتماماتك.' 
+        : 'Dive into a world of ' + category.title + ' Arabic podcasts on Podqasti. Discover captivating programs and inspiring stories that cater to your interests.'">
+</div>
+
+
+
+
+
+
+
+
+<div class="container">
+    <section class="breadcrumb-page breadcrumb-page pb-120">
+        <div class="sub-header">
+            <h3>{{ 'Categories' | translate }}</h3>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="javascript:;" [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+                </li>
+                <li>
+                    <a href="javascript:;" [routerLink]="['/', locale.prefix, 'categories']">&nbsp; {{'Categories' |
+                        translate }} /</a>
+                </li>
+                <li *ngIf="category">
+          <a href="javascript:;">&nbsp; {{ category.title }}</a> 
+                </li>
+            </ol>
+        </div>
+    </section>
+
+
+
+    <section class="custom-section mt-5" *ngIf="category">
+        <div class="title-wrapper">
+            <h2 class="main-title">
+                {{ 'Programs' | translate }}    {{ category.title }}  
+            </h2>
+            <!-- Optional "See More" Link -->
+            <!-- <a class="see-more" [routerLink]="['/', locale.prefix, 'Most-Popular']">{{ 'See More' | translate }}</a> -->
+        </div>
+        <div class="">
+            <div class="row " style="max-width:100%">
+                <ng-container *ngFor="let item of category.programs.list">
+                    <div class="col-md-3 col-12">
+                        <app-program-podcaster-card [program]="item" [locale]="locale"
+                            [footer]="false"></app-program-podcaster-card>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <section class="custom-section mt-5" *ngIf="most_listened">
+        <div class="title-wrapper">
+            <h2 class="main-title">
+                {{' Most listened to episodes' | translate }}
+            </h2>
+            <!-- Optional "See More" Link -->
+            <!-- <a class="see-more" [routerLink]="['/', locale.prefix, 'Most-Popular']">{{ 'See More' | translate }}</a> -->
+        </div>
+        <div class="">
+            <div class="row " style="max-width:100%">
+                <ng-container *ngFor="let item of most_listened ">
+                    <div class="col-md-3 col-12">
+                        <app-vertical-episode [item]="item" [locale]="locale"
+                           ></app-vertical-episode>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+</div>

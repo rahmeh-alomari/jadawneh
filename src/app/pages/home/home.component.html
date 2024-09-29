@@ -1,0 +1,234 @@
+<div appDynamicMeta 
+     [pageTitle]="locale.prefix === 'ar' ? 'بودكاستي: عالمك من البودكاست العربية | استكشف الآن' : 'Podqasti: Your World of Arabic Podcasts | Explore Now'"
+     [pageDescription]="locale.prefix === 'ar' ? 'اكتشف بودكاست عربية آسرة على بودكاستي. استكشف فئات متنوعة، وأفضل منشئي البودكاست، ومحتوى جذاب. انغمس في عالم القصص الصوتية العربية اليوم!' : 'Discover captivating Arabic podcasts on Podqasti. Explore diverse categories, top podcasters, and engaging content. Immerse yourself in the world of Arabic audio storytelling today!'">
+</div>
+
+
+<div class="main-padding">
+  <!-- <p *ngIf="home == null">Loading</p>
+<p *ngIf="home == false">Error</p>
+<p *ngIf="home">Loaded</p> -->
+<div class="container con-fliued"  >
+  <section class="main-body mar-vh" >
+    <div class="container mt-5" style="min-height: max-content;">
+      <div  >
+        <div >
+          <div class="position-relative">
+            <!-- Add this class to position the content relative to the image -->
+            <img src="../../../assets/podcasti/images/home-store-.jpeg" class="img-fluid" />
+
+            <!-- Position the store links on top of the image -->
+            <div class="store position-absolute"> <!-- Add 'position-absolute' class for absolute positioning -->
+              <a href="https://qr.podqasti.com">
+                <img src="assets/podcasti/images/google-play.png" alt="google-play" class="shake-effect" />
+              </a>
+              <a href="https://qr.podqasti.com">
+                <img src="assets/podcasti/images/app store.png" alt="app store" class="shake-effect" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+
+  <section id="demos" class="main-body" *ngIf="home">
+    <div class=" mar1-vh" style="min-height: max-content">
+      <div class="" style="max-width: 150%;
+      width: 105%;
+   ">
+          <div class="col-lg-12 col-md-12 col-12 pr-0">
+            <div class="position-relative">
+            <div class="custom1 owl-carousel owl-theme">
+              <ng-container *ngFor="let item of home.featured_programs">
+                <app-program-card [locale]="locale" [program]="item" [view]="'slider'"></app-program-card>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-lg-3 col-md-3 col-12 pl-0">
+            <div class="main-slider-2">
+                <h3>{{ 'Latest Episodes' | translate }}</h3>
+                <div class="owl-carousel second-slider owl-theme">
+                    <ng-container *ngFor="let item of home.latest_episodes">
+                        <div class="item">
+                            <a [routerLink]="['/', locale.prefix, 'episode', item.episode_id]">
+                                <img [src]="item.image" alt="">
+                                <h5 class="one-line-details">{{ item.title }} </h5>
+                                <p><span>{{ 'Program' | translate }}: </span>{{ item.program_title }}</p>
+                                <p><span>{{ 'Duration' | translate }}: </span>{{ item.duration }}</p>
+                            </a>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div> -->
+      </div>
+    </div>
+
+
+
+  </section>
+</div>
+ 
+  <!-- <div class="row download-app" style="max-width: 100%" *ngIf="home">
+    <div class="col-lg-6 col-md-6 col-md-12 text-left">
+      <h2 class="main-title-2">
+        <span>{{ "Download App" | translate }}</span>
+        {{ "App Name" | translate }}
+      </h2>
+      <p class="description">
+        {{ "app description line 1" | translate }}<br />
+        {{ "app description line 2" | translate }}
+      </p>
+      <div class="store">
+        <a href="https://qr.podqasti.com">
+          <img src="assets/podcasti/images/google play.jpeg" alt="" class="shake-effect" />
+        </a>
+        <a href="https://qr.podqasti.com">
+          <img src="assets/podcasti/images/app store.jpeg" alt="" class="shake-effect" />
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-md-12 text-right">
+      <img src="assets/podcasti/images/333.png" alt="" />
+    </div>
+  </div> -->
+
+  <!-- <div class="col-lg-12 col-md-12 col-12" *ngIf="home">
+    <h2 class="main-title">
+        {{'Just For You' | translate}}
+    </h2>
+    <div class="owl-carousel category-slider owl-theme">
+        <ng-container *ngFor="let item of home.we_chose_for_you">
+            <app-vertical-episode [item]="item" [locale]="locale"></app-vertical-episode>
+        </ng-container>
+    </div>
+</div> -->
+  <!-- <div class="container">
+  <div class="row">
+    <div  *ngIf="home">
+      <h2 class="main-title">
+        {{ "Most Recent" | translate }}
+      </h2>
+      <div id="cards" [class.arabic]="this.locale.prefix=='ar'" class="d-flex flex-wrap">
+        <div *ngFor="let item of home.latest_episodes" class="card col-12  col-lg-4">
+          <app-vertical-episode [item]="item" [locale]="locale"></app-vertical-episode>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+  <div *ngIf="home">
+    <div class="container">
+      <div class="title-wrapper">
+        <h2 class="main-title">
+          {{ 'Most Recent' | translate }}
+        </h2>
+        <a class="see-more" [routerLink]="['/', locale.prefix, 'Most-Recent'] ">{{ 'See More' | translate }} </a>
+      </div>
+
+
+
+
+      <div class="row row-fix ml-1">
+        <div *ngFor="let item of home.latest_episodes | slice:0:4" class="col-12 col-md-12 col-lg-6 col-xl-3 " >
+
+          <app-vertical-episode [item]="item" [locale]="locale"></app-vertical-episode>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div *ngIf="home">
+    <div class="container">
+
+      <div class="title-wrapper">
+        <h2 class="main-title">
+          {{ 'Most popular' | translate }}
+        </h2>
+        <a class="see-more" [routerLink]="['/', locale.prefix, 'Most-Popular'] ">{{ 'See More' | translate }} </a>
+      </div>
+      <div class="row row-fix">
+        <div *ngFor="let item of home.most_listened | slice:0:4" class="col-12 col-md-12 col-lg-6 col-xl-3">
+          <app-vertical-episode [item]="item" [locale]="locale"></app-vertical-episode>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- <section  *ngIf="home">
+  <h2 class="main-title">
+    {{ 'Most Listened' | translate }}
+  </h2>
+  <div class="row" style="margin: 1px;">
+    <div class="col-md-2 col-6 " *ngFor="let item of home.most_listened | slice:0:4">
+      <app-vertical-episode [item]="item" [locale]="locale"></app-vertical-episode>
+    </div>
+  </div>
+</section> -->
+
+  <div class="col-lg-12 col-md-12 col-12" *ngIf="home">
+
+    <div class="container">
+      <div class="title-wrapper">
+        <h1 class="main-title">
+          {{ 'Podcasters' | translate }}
+        </h1>
+        <a class="see-more" [routerLink]="['/', locale.prefix, 'Podcasters'] ">{{ 'See More' | translate }} </a>
+      </div>
+      <div class="row row-fix">
+        <ng-container *ngFor="let item of home.broadcasters | slice:0:4">
+          <app-podcaster-card [broadcaster]="item" [locale]="locale"
+            class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-3"></app-podcaster-card>
+        </ng-container>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <div class="col-lg-12 col-md-12 col-12" *ngIf="home">
+    <h2 class="main-title">
+        {{'Categories' | translate}}
+    </h2>
+    <div class="owl-carousel main-category-slider category-slider owl-theme">
+        <ng-container *ngFor="let item of home.categories">
+            <app-category-card [category]="item" [locale]="locale"></app-category-card>
+        </ng-container>
+    </div>
+</div> -->
+
+  <div class="col-lg-12 col-md-12 col-12" *ngIf="home">
+
+    <div class="container">
+      <div class="title-wrapper">
+        <h2 class="main-title">
+          {{ 'Channels' | translate }}
+        </h2>
+        <a class="see-more" [routerLink]="['/', locale.prefix, 'programs'] ">{{ 'See More' | translate }} </a>
+      </div>
+      <div class="row row-fix">
+        <ng-container *ngFor="let item of home.explore | slice:0:4">
+          <app-program-card [program]="item" [locale]="locale" [footer]="false"
+            class="col-12 col-md-6 col-lg-4 col-xl-3"></app-program-card>
+        </ng-container>
+      </div>
+    </div>
+
+
+  </div>
+</div>

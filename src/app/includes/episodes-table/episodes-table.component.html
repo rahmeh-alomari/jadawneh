@@ -1,0 +1,61 @@
+<div class="episodes-container">
+  
+    <div class="episode-item" *ngFor="let episode of episodes; let i=index">
+      <div class="episode-image" [routerLink]="['/', locale.prefix, 'episode', episode.episode_id]">
+        <img [src]="episode.image" alt="Episode Image">
+      </div>
+      
+      <div class="episode-details" [routerLink]="['/', locale.prefix, 'episode', episode.episode_id]">
+        <a [routerLink]="['/', locale.prefix, 'episode', episode.episode_id]" class="episode-link">
+          {{ episode.title }}
+        </a>
+        
+        <span class="episode-duration">{{ episode.duration }}</span>
+      </div>
+      <div class="episode-actions">
+        <div class="favorite-container">
+          <div class="button-with-count" [routerLink]="['/', locale.prefix, 'episode', episode.episode_id]">
+            <i class="fa fa-heart fixicone" [ngClass]="{'text-danger': episode.you_favored_this}"></i>
+
+            <a href="javascript:;" class="favorite-button" (click)="toggleFavorite(episode)">
+              <span class="favorite-count">{{ episode.favored_by }}</span>
+
+            </a>
+          </div>
+          <div class="container-vertical" >
+            <div class="vertical-line"></div>
+        </div>
+          <div class="button-with-count"  [routerLink]="['/', locale.prefix, 'episode', episode.episode_id]">
+            <i class="fa fa-headphones fixicone"></i>
+            <a href="javascript:;" class="listen-button">
+              <span class="listen-count">{{ episode.listened_by }}</span>
+
+            </a>
+
+          </div>
+            <!-- Dropdown Menu -->
+        <div class="nav-container " >
+          <a href="javascript:;" class="new-nav-item" >
+            <i class="fa fa-ellipsis-h " aria-hidden="true" ></i>
+            <div class="table-nav-item"  >
+              <ul class="dropdown-menu custom-dropdown-menu2">
+                <a href="javascript:;" class="dropdown-item" (click)="toggleFavorite(episode)">
+                  <i class="fa-solid fa-star "></i>
+                  <span *ngIf="!episode.you_favored_this" style="z-index: 9999999999999;">{{ 'Add To Favourite' | translate }}</span>
+                  <span *ngIf="episode.you_favored_this">{{ 'Remove From Favorite' | translate }}</span>
+                </a>
+                <a [routerLink]="['/', locale.prefix, 'episode', episode.episode_id]" class="dropdown-item">
+                  <i class="fa fa-eye"></i>
+                  <span>{{ 'Episode Details' | translate }}</span>
+                </a>
+              </ul>
+            </div>
+          </a>
+        </div>
+        </div>
+        
+      
+      </div>
+    </div>
+  </div>
+  

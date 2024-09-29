@@ -1,0 +1,271 @@
+/* You can add global styles to this file, and also import other style files */
+// body.has-rtl {
+//   vm-scrubber-control {
+//     -webkit-transform: rotateY(180deg) !important;
+//     -moz-transform: rotateY(180deg) !important;
+//     -ms-transform: rotateY(180deg) !important;
+//     -o-transform: rotateY(180deg) !important;
+//     transform: rotateY(180deg) !important;
+//   }
+// }
+
+vm-player {
+    width: 100%;
+  --vm-color-dark: #B5B5B5;
+  --vm-color-gray-100: rgba(0, 0, 0, 0.1);
+  --vm-color-gray-200: rgba(0, 0, 0, 0.27);
+  --vm-color-gray-300: rgba(0, 0, 0, 0.38);
+  --vm-color-gray-500: rgba(0, 0, 0, 0.64);
+  --vm-color-gray-600: rgba(0, 0, 0, 0.7);
+  --vm-color-white-100: rgba(255, 255, 255, 0.1);
+  --vm-color-white-200: rgba(255, 255, 255, 0.27);
+  --vm-color-white-700: rgba(255, 255, 255, 0.87);
+  --vm-fade-transition: opacity 0.3s ease-in-out;
+  --vm-media-z-index: 0;
+  --vm-blocker-z-index: 1;
+  --vm-ui-z-index: 2;
+  --vm-loading-screen-z-index: 1;
+  --vm-poster-z-index: 5;
+  --vm-scrim-z-index: 10;
+  --vm-click-to-play-z-index: 20;
+  --vm-dbl-click-fullscreen-z-index: 20;
+  --vm-captions-z-index: 30;
+  --vm-spinner-z-index: 40;
+  --vm-controls-z-index: 50;
+  --vm-tooltip-z-index: 60;
+  --vm-menu-z-index: 70;
+  --vm-skeleton-z-index: 100;
+  --vm-player-bg: rgb(0, 0, 0);
+  --vm-player-border-radius: 4px;
+  --vm-player-font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  --vm-loading-screen-dot-size: 12px;
+  --vm-loading-screen-pulse-duration: 1.5s;
+  --vm-loading-screen-dot-color: var(--vm-player-theme,
+      var(--vm-color-white-700));
+  --vm-skeleton-color: hsl(0, 10%, 90%);
+  --vm-skeleton-sheen-color: hsl(0, 10%, 97%);
+  --vm-slider-thumb-width: 13px;
+  --vm-slider-thumb-height: 13px;
+  --vm-slider-thumb-bg: transparent linear-gradient(107deg, #FF884B 0%, #FFC764 100%) 0% 0% no-repeat padding-box;
+  --vm-slider-thumb-border: 2px solid transparent;
+  --vm-slider-track-height: 3px;
+  --vm-slider-track-focused-height: 5px;
+  --vm-slider-track-color: var(--vm-color-white-200);
+  --vm-slider-value-color: var(--vm-player-theme, #FFC764);
+  --vm-tooltip-border-radius: 3px;
+  --vm-tooltip-font-size: 14px;
+  --vm-tooltip-padding: calc(var(--vm-control-spacing) / 1.5);
+  --vm-tooltip-fade-duration: 0.2s;
+  --vm-tooltip-fade-timing-func: ease;
+  --vm-tooltip-spacing: 14px;
+  --vm-tooltip-box-shadow: 0 0 2px var(--vm-color-gray-500);
+  --vm-tooltip-bg: var(--vm-color-dark);
+  --vm-tooltip-color: var(--vm-color-white-700);
+  --vm-spinner-width: 80px;
+  --vm-spinner-height: 80px;
+  --vm-spinner-thickness: 3px;
+  --vm-spinner-fill-color: #FF924F;
+  --vm-spinner-track-color: var(--vm-color-white-200);
+  --vm-spinner-spin-duration: 1.1s;
+  --vm-spinner-spin-timing-func: linear;
+  --vm-scrim-bg: var(--vm-color-gray-300);
+  --vm-captions-text-color: #FF924F;
+  --vm-captions-font-size: 18px;
+  --vm-captions-font-size-medium: 22px;
+  --vm-captions-font-size-large: 24px;
+  --vm-captions-font-size-xlarge: 28px;
+  --vm-captions-cue-bg-color: var(--vm-color-gray-600);
+  --vm-captions-cue-border-radius: 2px;
+  --vm-captions-cue-padding: 0.2em 0.5em;
+  --vm-controls-bg: transparent;
+  --vm-controls-border-radius: 4px;
+  --vm-controls-padding: var(--vm-control-spacing);
+  --vm-controls-spacing: var(--vm-control-spacing);
+  --vm-control-group-spacing: var(--vm-control-spacing);
+  --vm-control-border: 0;
+  --vm-control-scale: 1;
+  --vm-control-border-radius: 3px;
+  --vm-control-spacing: 0px;
+  --vm-control-padding: 0px;
+  --vm-control-icon-size: 28px;
+  --vm-control-color: #FF924F;
+  --vm-control-tap-highlight: var(--vm-color-white-200);
+  --vm-control-focus-color: #FF924F;
+  --vm-control-focus-bg: var(--vm-player-theme, var(--vm-color-white-200));
+  --vm-scrubber-loading-stripe-size: 25px;
+  --vm-scrubber-buffered-bg: var(--vm-color-white-200);
+  --vm-scrubber-loading-stripe-color: var(--vm-color-white-200);
+  --vm-scrubber-tooltip-spacing: 10px;
+  --vm-time-font-size: 14px;
+  --vm-time-font-weight: 400;
+  --vm-time-color: var(--vm-color-white-700);
+  --vm-menu-color: var(--vm-color-white-700);
+  --vm-menu-bg: var(--vm-color-dark);
+  --vm-menu-font-size: 14px;
+  --vm-menu-font-weight: 400;
+  --vm-menu-transition: transform 0.25s ease-out;
+  --vm-menu-item-padding: 8px;
+  --vm-menu-item-focus-color: var(--vm-menu-color);
+  --vm-menu-item-focus-bg: var(--vm-color-white-100);
+  --vm-menu-item-tap-highlight: var(--vm-color-white-100);
+  --vm-menu-item-hint-color: var(--vm-menu-color);
+  --vm-menu-item-hint-font-size: 13px;
+  --vm-menu-item-hint-opacity: 0.54;
+  --vm-menu-item-badge-color: var(--vm-menu-color);
+  --vm-menu-item-badge-bg: transparent;
+  --vm-menu-item-badge-font-size: 10px;
+  --vm-menu-item-arrow-color: var(--vm-menu-color);
+  --vm-menu-item-check-icon-size: 16px;
+  --vm-menu-item-divider-color: var(--vm-color-white-100);
+  --vm-settings-width: 275px;
+  --vm-settings-padding: 8px;
+  --vm-settings-max-height: 75%;
+  --vm-settings-border-radius: 2px;
+  --vm-settings-shadow: 0 0 8px 2px var(--vm-color-gray-100);
+  --vm-settings-scroll-width: 10px;
+  --vm-settings-scroll-thumb-color: var(--vm-color-white-200);
+  --vm-settings-scroll-track-color: var(--vm-menu-bg);
+  --vm-settings-transition: transform 0.2s cubic-bezier(0, 0, 0.4, 1) 0.16s, opacity 0.2s cubic-bezier(0, 0, 0.4, 1) 0.16s
+}
+
+vm-player[video] {
+  --vm-tooltip-spacing: 18px
+}
+
+vm-player[mobile],
+vm-player[touch] {
+  --vm-control-border-radius: 50%
+}
+
+vm-player[mobile] {
+  --vm-settings-width: 100%;
+  --vm-menu-control-padding: 12px calc(var(--vm-control-padding) * 2)
+}
+
+vm-player[audio] {
+  --vm-controls-bg: var(--vm-color-dark);
+  --vm-settings-max-height: 200px;
+  --vm-tooltip-spacing: 10px;
+  margin-top: 34px;
+}
+
+img{
+  border-radius: 8%;
+}
+.col-md-12 {
+  position: relative;
+  text-align: center;
+}
+
+.player-top-head {
+  position: absolute;
+  bottom: -20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+ 
+  text-align: center;
+  
+  color: #fff; /* Optional: text color to contrast with background */
+  padding: 5px 0; /* Adds padding for spacing */
+  border-radius: 5px; /* Optional: rounded corners */
+      
+}
+.fas .fa-play{
+    width: 45px !important;
+}
+.player-container .heart{
+  background: #92288f !important;
+  border-color: #92288f;
+}
+.player-top-head .heart {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.player-top-head .heart i {
+  color: #fff; /* Optional: color for the heart icon */
+}
+
+.img-podcaster{
+  width: 50.46%;
+  max-width: -webkit-fill-available;
+  height: 100.46%;
+  max-height: -webkit-fill-available;
+  object-fit: fill;
+
+}
+
+
+.player-play-icon {
+ margin:inherit;
+  width: 67px;
+  position: relative !important;
+  z-index: 999999999 !important;
+  // margin-inline-start: 30px;
+  height: 70px; text-align: center;
+  padding: 10px 6px 10px 10px;
+  background-color:#542779 !important
+ 
+}.player-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px; /* Adjust margin as needed for spacing between elements */
+}
+
+.icon {
+  cursor: pointer;
+}
+.player-forward i  {
+  cursor: pointer;
+}
+.number {
+  font-size: 7px; /* Adjust font size as needed */
+  color: #542779;  /* Adjust color as needed */
+  margin-top: -10px; /* Adjust spacing between icon and number */
+}
+.player-forward {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number {
+  font-size: 14px; /* Adjust font size as needed */
+  color: #542779;  /* Adjust color as needed */
+  margin-top: 5px; /* Adjust spacing between icon and number */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 770px) {
+  .player-fast, .player-play-icon, .player-share-icons {
+      /* font-size: 0.9rem; Adjust font size for smaller screens */
+  }
+  .number {
+      font-size: 12px; /* Adjust number font size for smaller screens */
+  }
+.row-fixed{
+  margin: 1px 31px;
+        max-width: 80%;
+        width: auto;
+}
+.item{
+  margin: 0px 105px !important;
+}
+}
+
+@media (min-width: 900px) {
+  .item-icon {
+    margin-inline-end: 30px;
+  }
+  
+}
+
+@media (min-width: 860px) {
+.item{
+  margin: 0px 3em !important;
+}}
+@media (max-width: 796px) {
+  .item{
+    margin: 0px 3.2em !important;
+  }}

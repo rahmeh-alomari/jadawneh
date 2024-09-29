@@ -1,0 +1,37 @@
+<section class=""  style=" margin-top: 1.8rem;" style="width: 70%;" >
+                <div class="row  row-fixed" >
+                 
+                   
+                    <div class="col-3" >
+                        <div class="item" >
+                            <!-- <span class="player-counter">{{ currentTimeInSeconds }}</span> -->
+                            <vm-player dir="rtl" #player cross-origin="true" [currentTime]="currentTime"
+                                (vmCurrentTimeChange)="CurrentTimeChange($event)"
+                                (vmDurationChange)="setDuration($event)" (vmPausedChange)="stateChanged($event)"
+                                (vmPlaybackReady)="PlaybackReady($event)" (vmSeeked)="onSeek($event)"
+                                (vmPlaybackReady)="onReady($event)" 
+                              class="plyer-episode"
+                                >
+                                <vm-audio>
+                                    <source data-src="{{ episode.link }}" type="audio/mp3" />
+                                </vm-audio>
+                                <vm-controls >
+                                    <vm-scrubber-control [hideTooltip]="true " class="waveform"></vm-scrubber-control>
+                                    <vm-live-indicator></vm-live-indicator>
+                                </vm-controls>
+                            </vm-player>
+                            <!-- <span class="player-counter">{{ duration }}</span> -->
+                        </div>
+                    </div>
+                    <div class=" col-3 "  >
+                        <div class class="item"style=" " >
+                               <a href="javascript:;" class="player-play-icon ss" *ngIf="!isPlaying" (click)="toggleState()">
+                            <i class="fas fa-play" style="width: 40px;"></i>
+                        </a>
+                        <a href="javascript:;" class="player-play-icon" *ngIf="isPlaying" (click)="toggleState()">
+                            <i class="fas fa-pause" style="width: 40px;"></i>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+</section>

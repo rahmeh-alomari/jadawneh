@@ -1,0 +1,247 @@
+
+<div appDynamicMeta 
+     [pageTitle]="locale.prefix === 'ar' ? 'خدمات بودكاستي: ارتقِ ببودكاستك العربية' : 'Podqasti Services: Elevate Your Arabic Podcast'"
+     [pageDescription]="locale.prefix === 'ar' ? 'بالإضافة إلى الاستضافة، تقدم بودكاستي مجموعة من الخدمات لمساعدتك في إنشاء وتنمية وتحقيق الدخل من البودكاست العربية الخاصة بك. تعرف على المزيد حول حلولنا اليوم.' : 'Beyond hosting, Podqasti offers a suite of services to help you create, grow, and monetize your Arabic podcast. Learn more about our solutions today.'">
+</div>
+
+
+
+<div class="container">
+
+<body *ngIf="locale.name == 'Arabic'" style="text-align: right; direction: rtl; ">
+  <section class="breadcrumb-page breadcrumb-page-pb-120">
+    <div class="sub-header">
+        <h3>{{ 'OurService' | translate }}</h3>
+        <ol class="breadcrumb">
+            <li>
+                <a href="javascript:;" [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+            </li>
+            <li>
+                <a href="javascript:;">&nbsp; {{'OurService' | translate}}</a>
+            </li>
+        </ol>
+    </div>
+</section>
+
+
+  <!-- Header Section -->
+  <header>
+    <h1 class="headline">{{ locale.name === 'Arabic' ? 'خدمات بودكاستي الإبداعية في التصوير وإنتاج البودكاست' : 'Podcast
+      Creative Services in Recording and Podcast Production' }}</h1>
+    <!-- <p class="paragraph">{{ locale.name === 'Arabic' ? 'بودكاستي شركة رائدة في مجال الإنتاج الرقمي (الصوتي والمرئي).' :
+      'Podcasti is a leading company in digital production (audio and video).' }}</p> -->
+  </header>
+  <div class="contact-info-serv">
+    <h4>{{ locale.name === 'Arabic' ? 'للمزيد من المعلومات تواصل معنا على الواتساب:' : 'For more information, contact us on WhatsApp:' }}
+      <a href="https://api.whatsapp.com/send/?phone=962792666069"  target="_blank" rel="noopener noreferrer">0792666069</a></h4>
+    <h4>{{ locale.name === 'Arabic' ? 'أو قم بإرسال بريد إلكتروني:' : 'Or email us at:' }}
+       <a
+        href="mailto:rana.s@podqasti.com">rana.s@podqasti.com</a></h4>
+  </div>
+  <div class="row">
+    <div class="col-lg-5 mt-5">
+      <div class="card-body  pb-3">
+        <img src="assets/podcasti/images/Maskgroup.png" alt="">
+    
+        <h3>{{ locale.name === 'Arabic' ? 'التسجيل الصوتي  سمّع العالم صوتك' : 'Voice Recording  Let the World Hear
+          Your Voice' }}</h3>
+        <div >
+          <p>{{ locale.name === 'Arabic' ? 'هل لديك محتوى ترغب في مشاركته مع العالم؟ اكتشف قوة البودكاست في إيصال قصتك
+            وأفكارك وخبراتك، مع فريقنا في بودكاستي! نحن نقدم خدمات إنتاج بودكاست شاملة. ابدأ رحلتك مع بودكاستي اليوم واجعل
+            الصوت يروي قصتك بطريقة لا تُنسى!' : 'Do you have content you want to share with the world? Discover the power
+            of podcasting in conveying your story, ideas, and experiences with our team at Podcasti! We provide
+            comprehensive podcast production services. Start your journey with Podcasti today and make your voice tell
+            your unforgettable story!' }}</p>
+        </div>
+       
+      </div>
+    </div>
+    <div class="col-lg-5 mt-5">
+      <div class="card-body  ">
+        <img src="assets/podcasti/images/Frame22.png" alt="">
+    
+        <h3>{{ locale.name === 'Arabic' ? 'التصوير وخدمات الإنتاج المرئي' : 'Photography and Visual Production Services'
+        }}</h3>
+        <div >
+          <p>{{ locale.name === 'Arabic' ? 'في بودكاستي، نفتخر بتقديم خدمات تصوير وإنتاج محتوى مرئي بجودة عالية. سواء كنت
+            في بداية الرحلة أو تحتاج إلى تطوير عملك وإضافة لمسة فنية على برنامجك الحالي، فإننا هنا لنجعل تجربتك ناجحة
+            وممتعة.' : 'Do you have content you want to share with the world? Discover the power of podcasting in
+            conveying your story, ideas, and experiences with our team at Podcasti! We provide comprehensive podcast
+            production services. Start your journey with Podcasti today and make your voice tell your unforgettable
+            story!' }}</p>
+        </div>
+       
+      </div>
+    </div>
+    <div class="col-lg-5 mt-5">
+      <div class="card-body  pb-3">
+        <img src="assets/podcasti/images/Maskgroup2.png" alt="">
+    
+        <h3>{{ locale.name === 'Arabic' ? 'التخطيط للبرامج والتنفيذ الاحترافي' : 'Program Planning and Professional
+          Execution' }}</h3>
+        <div >
+          <p>{{ locale.name === 'Arabic' ? 'تمتلك بودكاستي استوديوهات مجهزة بالكامل وفريق محترف، ما يؤهلنا لنقدم لك
+            خدماتنا في جميع مراحل الإنتاج، بدءًا من التخطيط والبحث وصولاً إلى الإنتاج ومرحلة ما بعد الإنتاج. دعنا نعمل
+            معًا على تحقيق رؤيتك وجعل الحلم حقيقة.' : 'Podcasti has fully equipped studios and a professional team,
+            qualifying us to provide you with our services in all stages of production, from planning and research to
+            production and post-production. Let is work together to achieve your vision and make the dream a reality.' }}
+          </p>
+        </div>
+       
+      </div>
+    </div>
+
+
+    <div class="col-lg-5 mt-5">
+      <div class="card-body  pb-3">
+        <img src="assets/podcasti/images/Maskgroup3.png" alt="">
+    
+        <h3>{{ locale.name === 'Arabic' ? 'النشر والترويج' : 'Promotion and Advertising' }}</h3>
+        <div >
+          <p>{{ locale.name === 'Arabic' ? 'نحن هنا لمساعدتك في الترويج لبرنامج البودكاست الخاص بك، وجذب الجمهور المناسب.
+            نقوم بإدارة جميع جوانب النشر والتسويق لضمان وصول قصتك إلى أكبر عدد ممكن من المستمعين.' : 'We are here to help
+            you promote your podcast program and attract the right audience. We manage all aspects of publishing and
+            marketing to ensure your story reaches the largest possible number of listeners.' }}</p>
+        </div>
+       
+      </div>
+    </div>
+
+    <div class="col-lg-5 mt-5">
+      <div class="card-body  pb-3">
+        <img src="assets/podcasti/images/Maskgroup4.png" alt="">
+    
+        <h3>{{ locale.name === 'Arabic' ? 'تصميم هوية بصرية' : 'Visual Identity Design' }}</h3>
+        <div >
+          <p>{{ locale.name === 'Arabic' ? 'دعنا نساعدك في بناء هوية بصرية مميزة تعكس رؤيتك في برنامج البودكاست الخاص بك.
+            سنقدم لك التصميم المناسب الذي يميزك عن الآخرين ويجذب انتباه الجمهور.' : 'Let us help you build a distinctive
+            visual identity that reflects your vision for your podcast program. We will provide you with the appropriate
+            design that sets you apart and attracts the audience is attention.' }}</p>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+</body>
+<body *ngIf="locale.name == 'English'" style="text-align: left; direction: ltr; ">
+  <section class="breadcrumb-page breadcrumb-page-pb-120">
+    <div class="sub-header">
+        <h3>{{ 'OurService' | translate }}</h3>
+        <ol class="breadcrumb">
+            <li>
+                <a href="javascript:;" [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+            </li>
+            <li>
+                <a href="javascript:;">&nbsp; {{'OurService' | translate}}</a>
+            </li>
+        </ol>
+    </div>
+</section>
+<!-- <div style="text-align: start" class="abouts-us-tiltle">
+  <h3 style="font-weight: bold;color: #524779;">
+      {{'OurService' | translate}}
+  </h3>
+</div> -->
+ <!-- Header Section -->
+ <header>
+  <h1 class="headline">{{ locale.name === 'Arabic' ? 'خدمات بودكاستي الإبداعية في التصوير وإنتاج البودكاست' : 'Podcast
+    Creative Services in Recording and Podcast Production' }}</h1>
+  <!-- <p class="paragraph">{{ locale.name === 'Arabic' ? 'بودكاستي شركة رائدة في مجال الإنتاج الرقمي (الصوتي والمرئي).' :
+    'Podcasti is a leading company in digital production (audio and video).' }}</p> -->
+</header>
+<div class="contact-info-serv">
+  <h4>{{ locale.name === 'Arabic' ? 'للمزيد من المعلومات تواصل معنا على الواتساب:' : 'For more information, contact us on WhatsApp:' }}
+    <a href="https://api.whatsapp.com/send/?phone=962792666069"  target="_blank" rel="noopener noreferrer">0792666069</a></h4>
+  <h4>{{ locale.name === 'Arabic' ? 'أو قم بإرسال بريد إلكتروني:' : 'Or email us at:' }}
+     <a
+      href="mailto:rana.s@podqasti.com">rana.s@podqasti.com</a></h4>
+</div>
+<div class="row">
+  <div class="col-lg-5 mt-5">
+    <div class="card-body  pb-3">
+      <img src="assets/podcasti/images/Maskgroup.png" alt="">
+  
+      <h3>{{ locale.name === 'Arabic' ? 'التسجيل الصوتي  سمّع العالم صوتك' : 'Voice Recording  Let the World Hear
+        Your Voice' }}</h3>
+      <div >
+        <p>{{ locale.name === 'Arabic' ? 'هل لديك محتوى ترغب في مشاركته مع العالم؟ اكتشف قوة البودكاست في إيصال قصتك
+          وأفكارك وخبراتك، مع فريقنا في بودكاستي! نحن نقدم خدمات إنتاج بودكاست شاملة. ابدأ رحلتك مع بودكاستي اليوم واجعل
+          الصوت يروي قصتك بطريقة لا تُنسى!' : 'Do you have content you want to share with the world? Discover the power
+          of podcasting in conveying your story, ideas, and experiences with our team at Podcasti! We provide
+          comprehensive podcast production services. Start your journey with Podcasti today and make your voice tell
+          your unforgettable story!' }}</p>
+      </div>
+     
+    </div>
+  </div>
+  <div class="col-lg-5 mt-5 ">
+    <div class="card-body  ">
+      <img src="assets/podcasti/images/Frame22.png" alt="">
+  
+      <h3>{{ locale.name === 'Arabic' ? 'التصوير وخدمات الإنتاج المرئي' : 'Photography and Visual Production Services'
+      }}</h3>
+      <div >
+        <p>{{ locale.name === 'Arabic' ? 'في بودكاستي، نفتخر بتقديم خدمات تصوير وإنتاج محتوى مرئي بجودة عالية. سواء كنت
+          في بداية الرحلة أو تحتاج إلى تطوير عملك وإضافة لمسة فنية على برنامجك الحالي، فإننا هنا لنجعل تجربتك ناجحة
+          وممتعة.' : 'Do you have content you want to share with the world? Discover the power of podcasting in
+          conveying your story, ideas, and experiences with our team at Podcasti! We provide comprehensive podcast
+          production services. Start your journey with Podcasti today and make your voice tell your unforgettable
+          story!' }}</p>
+      </div>
+     
+    </div>
+  </div>
+  <div class="col-lg-5 mt-5">
+    <div class="card-body  pb-3">
+      <img src="assets/podcasti/images/Maskgroup2.png" alt="">
+  
+      <h3>{{ locale.name === 'Arabic' ? 'التخطيط للبرامج والتنفيذ الاحترافي' : 'Program Planning and Professional
+        Execution' }}</h3>
+      <div >
+        <p>{{ locale.name === 'Arabic' ? 'تمتلك بودكاستي استوديوهات مجهزة بالكامل وفريق محترف، ما يؤهلنا لنقدم لك
+          خدماتنا في جميع مراحل الإنتاج، بدءًا من التخطيط والبحث وصولاً إلى الإنتاج ومرحلة ما بعد الإنتاج. دعنا نعمل
+          معًا على تحقيق رؤيتك وجعل الحلم حقيقة.' : 'Podcasti has fully equipped studios and a professional team,
+          qualifying us to provide you with our services in all stages of production, from planning and research to
+          production and post-production. Let is work together to achieve your vision and make the dream a reality.' }}
+        </p>
+      </div>
+     
+    </div>
+  </div>
+
+
+  <div class="col-lg-5 mt-5">
+    <div class="card-body  pb-3">
+      <img src="assets/podcasti/images/Maskgroup3.png" alt="">
+  
+      <h3>{{ locale.name === 'Arabic' ? 'النشر والترويج' : 'Promotion and Advertising' }}</h3>
+      <div >
+        <p>{{ locale.name === 'Arabic' ? 'نحن هنا لمساعدتك في الترويج لبرنامج البودكاست الخاص بك، وجذب الجمهور المناسب.
+          نقوم بإدارة جميع جوانب النشر والتسويق لضمان وصول قصتك إلى أكبر عدد ممكن من المستمعين.' : 'We are here to help
+          you promote your podcast program and attract the right audience. We manage all aspects of publishing and
+          marketing to ensure your story reaches the largest possible number of listeners.' }}</p>
+      </div>
+     
+    </div>
+  </div>
+
+  <div class="col-lg-5 mt-5">
+    <div class="card-body  pb-3">
+      <img src="assets/podcasti/images/Maskgroup4.png" alt="">
+  
+      <h3>{{ locale.name === 'Arabic' ? 'تصميم هوية بصرية' : 'Visual Identity Design' }}</h3>
+      <div >
+        <p>{{ locale.name === 'Arabic' ? 'دعنا نساعدك في بناء هوية بصرية مميزة تعكس رؤيتك في برنامج البودكاست الخاص بك.
+          سنقدم لك التصميم المناسب الذي يميزك عن الآخرين ويجذب انتباه الجمهور.' : 'Let us help you build a distinctive
+          visual identity that reflects your vision for your podcast program. We will provide you with the appropriate
+          design that sets you apart and attracts the audience is attention.' }}</p>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+</body>
+</div>

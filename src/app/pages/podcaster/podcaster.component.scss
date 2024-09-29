@@ -1,0 +1,105 @@
+.main-program {
+     margin-top: 80px !important;
+}
+
+h1{
+     text-align: start;
+     font-weight: bold;
+     margin-top: auto;
+     color: #524779;
+     font-size: 32px;
+     margin-bottom: 24px;
+}
+
+.img-pod{
+     width: 227.76px !important;
+     height: 232.22px !important;
+     border-radius: 20px !important;
+}
+.row{
+     margin: auto !important;
+}
+.top{
+     margin-top: -30px;
+}
+.program-card-container{
+     margin-top: 90px;
+}
+
+.program-card{
+     margin-top: 85px;
+}
+.heart-container {
+     position: relative;
+    
+     font-size: xx-large;
+     margin-inline-start: 95px;
+     
+ }
+ .heart i{
+     color:#F3CC30;
+ }
+
+ .tooltip-container {
+     position: relative;
+     display: inline-block;
+   }
+   .start {
+    font-weight: 1 !important;
+ }
+
+ .start:hover{
+     font-weight: 900 !important;
+  }
+   .custom-tooltip {
+     position: absolute;
+     bottom: 100%;
+     left: 50%;
+     transform: translateX(-50%);
+     // background-color: #F5F5F5;
+     color: #542779;
+     display: flex;
+     align-items: center; /* Center text vertically */
+     justify-content: center; /* Center text horizontally, if needed */   height: 40px;
+     width: 144px;
+     font-size: 16px;
+     border-radius: 3px;
+     white-space: nowrap;
+   
+     box-shadow: 0 0 10px rgba(6, 3,3,0.25);
+     z-index: 1000; /* Ensure it appears above other elements */
+   }
+   
+   .tooltip-arrow {
+     position: absolute;
+     top: 100%; /* Position the arrow at the bottom of the tooltip */
+     left: 50%;
+     transform: translateX(-50%);
+     border-width: 6px;
+     border-style: solid;
+     border-color: #FFFFFF transparent transparent transparent; /* Arrow pointing down */
+   }
+   
+   .tooltip-container .heart {
+     text-decoration: none;
+   }
+   
+   .heart i {
+     font-size: 24px; /* Adjust icon size as needed */
+     /* Default color of the icon */
+   }
+   .justified-text {
+     // margin-top: 15px;
+     text-align: justify !important;
+    // text-align-last: justify !important;
+ }
+ @media (max-width: 802px) {
+  
+     .card-container-pad{
+          margin-inline-start: -20px;
+      }
+     }
+      .card-container-pad{
+          margin-inline-start: 80px;
+      }
+      

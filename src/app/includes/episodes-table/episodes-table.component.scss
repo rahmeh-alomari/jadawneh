@@ -1,0 +1,183 @@
+.text-content {
+    /* Optional: Adjust padding if needed */
+    padding: 0;
+  }
+  
+  .episode-link {
+    display: block;
+    color: #524779;
+   
+    text-decoration: none; /* Optional: Remove underline */
+    margin-bottom: 4px; /* Optional: Space between title and duration */
+  }
+  
+  .table-time {
+    display: block;
+    color: #888; /* Optional: Adjust color as needed */
+  }
+  table tr th, table tr td{
+    text-align: start;
+  }.episodes-container {
+    display: flex;
+    flex-direction: column;
+    min-width:auto
+    /* gap: 1rem; Adjust as needed for spacing between items */
+  }
+  
+
+  @media (max-width: 802px) {
+  
+    .episodes-container {
+     
+      min-width:max-content
+    }
+    
+    }
+  .episode-item {
+    display: flex;
+   
+    align-items: center;
+    gap: 1rem; /* Adjust as needed for spacing between elements */
+    padding: 0.1rem;
+    padding-inline-start: 10px;
+    text-align: start;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .episode-image img {
+    width: 58.67px;
+    height: 58.67px;
+    border-radius: 8px;
+  }
+  
+  .episode-details {
+    flex: 0.88;
+  }
+  
+  .episode-link {
+    font-weight: bold;
+    color: #524779;
+    text-decoration: none;
+  }
+  .container-vertical {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.vertical-line {
+    width: 2px; /* Line thickness */
+    background-color: #B6B3B3; /* Line color */
+    height: 30px; /* Height of the line */
+}
+  .episode-duration {
+    display: block;
+    color: #666;
+  }
+  .favorite-container {
+    display: flex;
+    /* Adjust the space between the two button-with-count containers */
+    justify-content: center; /* Center the container horizontally */
+  }
+  
+  .button-with-count {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center align the content horizontally */
+    padding: 20px;
+    gap:2px;
+  }
+  
+  .favorite-count, .listen-count {
+    margin-bottom: -10px; /* Adjust this value to position the count closer to the button */
+    font-size: large; /* Smaller font size for the count */
+    position: relative;
+    top: 4px; /* Move the count upwards */
+  }
+  
+  .favorite-button, .listen-button {
+    text-decoration: none;
+  }
+  .fa,.fa-solid {
+    line-height: 2 ;
+    color: #92288f;
+  }
+
+ 
+  .favorite-button i, .listen-button i {
+    font-size: 24px; /* Adjust icon size as needed */
+  }
+  
+  .episode-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .favorite-button,
+  .listen-button {
+    cursor: pointer;
+    color: #92288f;
+   // min-width: 100%
+  }
+  
+  .favorite-count,
+  .listen-count {
+    margin: 0 0.5rem;
+  }
+  
+  .nav-container {
+    position: absolute;
+    top: 0;
+  
+    display: flex;
+    justify-content: flex-start; /* Default for English */
+  }
+  
+  .new-nav-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .episode-item:hover{
+    background-color: #F5EFFB;
+    cursor: pointer;
+  }
+  .table-nav-item {
+    display: none; /* Hide initially, show on hover */
+    position: absolute;
+    top: 100%;
+    left: 0; 
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .new-nav-item:hover .table-nav-item {
+    display: block; /* Show dropdown on hover */
+  }
+  
+  .custom-dropdown-menu2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  .table-nav-item{
+    top: 60% !important;
+  }
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown-item i {
+    margin-right: 8px;
+  }
+  

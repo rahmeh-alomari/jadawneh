@@ -1,0 +1,399 @@
+<div class="loader" *ngIf="loading">
+  <div class="middle">
+    <div class="bar bar1"></div>
+    <div class="bar bar2"></div>
+    <div class="bar bar3"></div>
+    <div class="bar bar4"></div>
+    <div class="bar bar5"></div>
+    <div class="bar bar6"></div>
+    <!-- <div class="bar bar7"></div>
+        <div class="bar bar8"></div> -->
+    <br />
+    <img src="assets/podcasti/images/color-logo.png" alt="" />
+  </div>
+</div>
+
+<header class="navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/', locale.prefix]">
+        <img style="width: 100px;max-width: fit-content;" src="assets/podcasti/images/logo.png" alt="" />
+      </a>
+      <button id="mobile-menu-btn" class="navbar-toggler new-init collapsed" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto-s">
+          <li class="nav-item" [ngClass]="{ active: currentMenu == 'home' }">
+            <a class="nav-link" [routerLink]="['/', locale.prefix]">{{ "Home" | translate }}
+              <hr class="h-underline" *ngIf="currentMenu == 'home'" />
+            </a>
+          </li>
+       
+          <!-- <li class="nav-item" [ngClass]="{ active: currentMenu == 'programs' }">
+            <a class=" nav-link" [routerLink]="['/', locale.prefix, 'about-us']">{{ "About Us" | translate }}
+              <hr class="h-underline" *ngIf="currentMenu == 'about-us'" />
+            </a>
+          </li> -->
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              {{ "Ourcontent" | translate }}
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" [routerLink]="['/', locale.prefix, 'programs']">{{ "Programs" | translate }}
+                <hr class="h-underline" *ngIf="currentMenu == 'programs'" />
+              </a>
+  
+              <a class=" dropdown-item" [routerLink]="['/', locale.prefix, 'blogs']">{{ "blog" | translate }}
+                <hr class="h-underline" *ngIf="currentMenu == 'blogs'" />
+              </a>
+             
+              <a class=" dropdown-item" [routerLink]="['/', locale.prefix, 'categories']">{{ "Categories" | translate }}
+                <hr class="h-underline" *ngIf="currentMenu == 'categories'" />
+              </a>
+              <a class=" dropdown-item" [routerLink]="['/', locale.prefix, 'Podcasters']"> {{ "Podcasters" | translate
+                }}
+                <hr class="h-underline" *ngIf="currentMenu == 'categories'" />
+              </a>
+            </div>
+
+          </div>
+
+        
+          <li class="nav-item" [ngClass]="{ active: currentMenu == 'programs' }">
+          
+            <a class="nav-link" [routerLink]="['/', locale.prefix, 'OurService']">{{ "OurService" | translate }}
+              <hr class="h-underline" *ngIf="currentMenu == 'OurService'" />
+            </a>
+          </li>
+
+
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenucontact" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              {{ "Contact Us" | translate }}
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenucontact">
+              <a class="dropdown-item" [routerLink]="['/', locale.prefix, 'about-us']">{{ "About Us" | translate }}
+                <hr class="h-underline" *ngIf="currentMenu == 'programs'" />
+              </a>
+             
+              <a class=" dropdown-item" [routerLink]="['/', locale.prefix, 'contact-us']">{{ "Send a Message" | translate }}
+                <hr class="h-underline" *ngIf="currentMenu == 'blogs'" />
+              </a>
+             
+             
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li class="nav-item header-search-nav">
+            <form [formGroup]="form" (ngSubmit)="onSearch()">
+              <i class="fa fa-search" (click)="onSearch()" style="color: #542779"></i>
+              <input class="form-control mr-sm-2 header-search" type="search" placeholder="{{ 'Search' | translate }}"
+                aria-label="Search" [formControlName]="'keyword'" />
+            </form>
+          </li>
+
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0 mr-3 ml-3">
+          <ul class="navbar-nav mr-auto-s">
+            
+            <ng-container *ngIf="!userStatus">
+              <li class="nav-item dropdown lang">
+                <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ locale.name }}
+                </a>
+  
+  
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" (click)="changeLanguage('en')">English</a>
+                  <a class="dropdown-item" (click)="changeLanguage('ar')">Arabic</a>
+                </div>
+  
+  
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/', locale.prefix, 'account', 'sign-in']">{{ "Sign in" | translate
+                  }}</a>
+              </li>
+              <li class="nav-item new-account-nav mx-2">
+                <a class="btn my-2 my-sm-0 new-account" [routerLink]="['/', locale.prefix, 'account', 'sign-up']">{{
+                  "New
+                  account" | translate }}</a>
+              </li>
+            </ng-container>
+            <ng-container *ngIf="userStatus" >
+              <li class="nav-item dropdown lang lang-dir" [ngClass]="{'lang-dir':userStatus}">
+                <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  {{ locale.name }}
+                </a>
+  
+  
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" (click)="changeLanguage('en')">English</a>
+                  <a class="dropdown-item" (click)="changeLanguage('ar')">Arabic</a>
+                </div>
+  
+  
+              </li>
+              <li class="nav-item dropdown " >
+                <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarAccountDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-user"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarAccountDropdown">
+                  <a class="dropdown-item" [routerLink]="['/', locale.prefix, 'profile']">{{ "Account" | translate
+                    }}</a>
+                  <a class="dropdown-item" [routerLink]="['/', locale.prefix, 'profile', 'favorite']">{{ "Favorite" |
+                    translate }}</a>
+                  <a class="dropdown-item" href="javascript:;" (click)="logout()">{{ "Logout" | translate }}</a>
+                </div>
+              </li>
+            </ng-container>
+          </ul>
+        </form>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      
+    </div>
+
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+<ng-container *ngIf="episode && showMiniPlayer">
+  <app-mini-player [episode]="episode" [locale]="locale" (onClose)="closeMiniPlayer($event)"
+    (onMainPlayer)="openEpisodePage($event)">
+  </app-mini-player>
+</ng-container>
+
+<!-- <section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <h2>{{ "Subscribe" | translate }}</h2>
+        <p>{{ "Enter Your Email" | translate }}</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+<div class="wrapper">
+  <div class="content">
+  </div>
+  <!-- <svg width="100vw" height="100vw" viewBox="0 0 1280 140" preserveAspectRatio="xMaxYMax meet"
+  xmlns="http://www.w3.org/2000/svg" class="s">
+    <g fill="#542779">
+        <path d="M853.893,86.998c-38.859,0-58.811-16.455-77.956-35.051c18.295-10.536,40.891-18.276,73.378-18.276c38.685,0,64.132,12.564,85.489,28.347C916.192,72.012,900.8,86.998,853.893,86.998z M526.265,80.945c-6.517-0.562-13.599-0.879-21.41-0.879c-70.799,0-91.337,27.229-134.433,35.662c14.901,3.72,32.118,6.07,52.898,6.07C470.171,121.797,500.34,103.421,526.265,80.945z" fill-opacity=".3"/>
+        <path d="M663.458,109.671c-67.137,0-80.345-23.824-137.193-28.726C567.086,45.555,597.381,0,665.691,0c61.857,0,85.369,27.782,110.246,51.947C736.888,74.434,717.459,109.671,663.458,109.671z M217.68,94.163c55.971,0,62.526,24.026,126.337,24.026c9.858,0,18.508-0.916,26.404-2.461c-57.186-14.278-80.177-48.808-138.659-48.808c-77.063,0-99.96,48.569-151.751,48.569c-40.006,0-60.008-12.206-80.011-29.506v16.806c20.003,10.891,40.005,21.782,80.011,21.782C160.014,124.57,158.608,94.163,217.68,94.163z M1200.112,46.292c-57.493,0-56.935,46.595-115.015,46.595c-53.612,0-59.755-39.618-115.602-39.618c-15.267,0-25.381,3.751-34.69,8.749c36.096,26.675,60.503,62.552,117.342,62.552c69.249,0,75.951-43.559,147.964-43.559c39.804,0,59.986,10.943,79.888,21.777V85.982C1260.097,68.771,1239.916,46.292,1200.112,46.292z" fill-opacity=".5"/>
+        <path d="M1052.147,124.57c-56.84,0-81.247-35.876-117.342-62.552c-18.613,9.994-34.005,24.98-80.912,24.98c-38.859,0-58.811-16.455-77.956-35.051c-39.05,22.487-58.479,57.724-112.48,57.724c-67.137,0-80.345-23.824-137.193-28.726c-25.925,22.447-47.108,37.711-102.146,37.711c-20.778,0-37.996-2.349-52.898-6.07c-7.895,1.545-16.546,2.461-26.404,2.461c-63.811,0-70.366,30.407-137.669,30.407c-40.006,0-60.008-10.891-80.011-21.782v37.212h1280v-37.212c-19.903-10.837-40.084-21.777-79.888-21.777C1128.098,81.011,1121.398,124.57,1052.147,124.57z" />
+    </g>
+</svg> -->
+
+<footer class="footer-02">
+
+  <!-- <div class="row justify-content-center">
+            <div class="col-10 col-lg-8">
+                <div class="subscribe mb-5">
+                    <form action="javascirpt:;" (submit)="subscribeToNewsletter()" class="subscribe-form">
+                        <div class="form-group d-flex">
+                            <input type="text" class="form-control rounded-left" placeholder="{{ 'Enter email address' | translate }}" name="email" [(ngModel)]="email">
+                            <input type="submit" value="{{ 'Subscribe Us' | translate }}" class="form-control submit px-3">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+
+  <div class="center-fotter" >
+    <div >
+      <div class=" rounded-social-buttons " style="text-align: justify;margin-top: 50px">
+        <!-- <h4 class="footer-heading">{{ "Follow Us" | translate
+          }}</h4> -->
+        <div style="text-align: center;">
+          <a class="social-button facebook" href="https://www.facebook.com/PodqastiApp/" target="_blank"><i
+              class="fab fa-facebook-f"></i></a>
+          <a class="social-button twitter" href="https://x.com/i/flow/login?redirect_after_login=%2FPodqastiApp"
+            target="_blank">
+            <!-- <i class="fab fa-twitter"></i> -->
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a class="social-button tiktok" target="_blank"
+            href="https://www.tiktok.com/@podqastiapp?is_from_webapp=1&sender_device=pc">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 32 32">
+              <path
+                d="M16.708 0.027c1.745-0.027 3.48-0.011 5.213-0.027 0.105 2.041 0.839 4.12 2.333 5.563 1.491 1.479 3.6 2.156 5.652 2.385v5.369c-1.923-0.063-3.855-0.463-5.6-1.291-0.76-0.344-1.468-0.787-2.161-1.24-0.009 3.896 0.016 7.787-0.025 11.667-0.104 1.864-0.719 3.719-1.803 5.255-1.744 2.557-4.771 4.224-7.88 4.276-1.907 0.109-3.812-0.411-5.437-1.369-2.693-1.588-4.588-4.495-4.864-7.615-0.032-0.667-0.043-1.333-0.016-1.984 0.24-2.537 1.495-4.964 3.443-6.615 2.208-1.923 5.301-2.839 8.197-2.297 0.027 1.975-0.052 3.948-0.052 5.923-1.323-0.428-2.869-0.308-4.025 0.495-0.844 0.547-1.485 1.385-1.819 2.333-0.276 0.676-0.197 1.427-0.181 2.145 0.317 2.188 2.421 4.027 4.667 3.828 1.489-0.016 2.916-0.88 3.692-2.145 0.251-0.443 0.532-0.896 0.547-1.417 0.131-2.385 0.079-4.76 0.095-7.145 0.011-5.375-0.016-10.735 0.025-16.093z" />
+            </svg>
+          </a>
+          <a class="social-button youtube" href="https://www.youtube.com/@podqastiapp" target="_blank"><i
+              class="fab fa-youtube"></i></a>
+          <a class="social-button instagram" href="https://www.instagram.com/podqastiapp/" target="_blank">
+            <!-- <i class="fab fa-instagram"></i> -->
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-3" style="display: flex;
+    justify-content: center;">
+
+     
+        <!-- <h2 class="footer-heading">{{ "Podqasti" | translate }}</h2>
+        <hr class="p-underline" /> -->
+
+        <div class="meune menue-footer">
+          <h5 class="footer-heading "><a [routerLink]="['/', locale.prefix, 'about-us']"> {{ "About Us" | translate
+              }}</a>
+          </h5>
+          <h5 class="footer-heading"> <a [routerLink]="['/', locale.prefix, 'programs']"> {{ "Programs" | translate
+              }}</a>
+          </h5>
+          <h5 class="footer-heading"><a [routerLink]="['/', locale.prefix, 'Podcasters']"> {{ "Podcasters" | translate
+              }}</a></h5>
+
+
+
+
+          <h5 class="footer-heading"><a [routerLink]="['/', locale.prefix, 'OurService']"> {{ "OurService" | translate
+              }}</a></h5>
+          <h5 class="footer-heading"><a [routerLink]="['/', locale.prefix, 'contact-us']"> {{ "Contact Us" | translate
+              }}</a></h5>
+
+        </div>
+   
+    </div>
+     
+    
+     
+      <!-- <div class="col-md-6 mb-md-0 mb-4">
+            <h2 class="footer-heading">{{ "Categories" | translate }}</h2>
+            <hr class="p-underline" />
+            <ul class="list-unstyled">
+              <li *ngFor="let item of footer.categories">
+                <a
+                  [routerLink]="[
+                    '/',
+                    locale.prefix,
+                    'category',
+                    item.category_id
+                  ]"
+                  class="py-1 d-block"
+                  >{{ item.title }}</a
+                >
+              </li>
+            </ul>
+          </div> -->
+
+      <!-- <div class="col-md-6 mb-md-0 mb-4">
+            <h2 class="footer-heading">{{ "Channels" | translate }}</h2>
+            <hr class="p-underline" />
+            <ul class="list-unstyled">
+              <li *ngFor="let item of footer.explore">
+                <a [routerLink]="[
+                    '/',
+                    locale.prefix,
+                    'program',
+                    item.program_id
+                  ]" class="py-1 d-block">{{ item.title }}</a>
+              </li>
+            </ul>
+          </div> -->
+      <!-- <div class="col-md-4 mb-md-0 mb-4">
+            <h2 class="footer-heading">{{ "Podcasters" | translate }}</h2>
+            <hr class="p-underline" />
+            <ul class="list-unstyled">
+              <li *ngFor="let item of footer.broadcasters">
+                <a
+                  [routerLink]="[
+                    '/',
+                    locale.prefix,
+                    'podcaster',
+                    item.broadcaster_id
+                  ]"
+                  class="py-1 d-block"
+                  >{{ item.title }}</a
+                >
+              </li>
+            </ul>
+          </div> -->
+<!-- 
+      <div class="col-lg-5" style="
+          margin: auto;
+        
+          padding-inline-start: 80px;
+      "> -->
+
+        <!-- <div>
+        <h2 class="footer-heading">{{ "Contact US" | translate }} {{ "+962-791221990" | translate }}</h2>
+        
+        <ul class="list-unstyled contact-list">
+
+          <li>
+            <p class="email">info@podqasti.com</p>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/xFgDDRGvgtTMMCgMA?g_st=ic" target="_blank" class="map">{{"Amman, Mecca
+              st - Makkah Towers" | translate}}</a>
+          </li>
+        </ul>
+      </div> -->
+
+
+      <!-- </div> -->
+
+
+   
+  </div>
+  <!-- <div class="row justify-content-center pt-5"> 
+    <div class="col-lg-8 text-center"> 
+      <p style="color: rgba(255, 255, 255, 0.83); font-size: 13px;">
+        {{ "© 2023 Podcasti.. All rights reserved" | translate }}
+      </p>
+    </div>
+  </div> -->
+
+</footer>
+
+
+</div>

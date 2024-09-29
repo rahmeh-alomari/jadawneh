@@ -1,0 +1,37 @@
+<div class="mini-player" *ngIf="miniPlayerVisible">
+    <a href="javascript:;" class="mini-player-close" (click)="closeMiniPlayer()">
+        x
+    </a>
+    <div class="player-content">
+        <div class="player-image" (click)="openMainPlayer()">
+            <img [src]="episode.image">
+        </div>
+        <div class="player-data">
+            <h4>
+                <a href="javascript:;" (click)="openMainPlayer()"
+                    [routerLink]="['/', locale.prefix, 'episode', episode.episode_id]" class="mini-title">
+                    {{ episode.title }}
+                </a>
+            </h4>
+            <p>{{ episode.program_title }}</p>
+        </div>
+    </div>
+    <div class="player-icon">
+        <a href="javascript:;" class="player-play-icon" *ngIf="! isPlaying" (click)="toggleState()">
+            <i class="fas fa-play"></i>
+        </a>
+        <a href="javascript:;" class="player-play-icon mini-pause" *ngIf="isPlaying" (click)="toggleState()">
+            <i class="fas fa-pause"></i>
+        </a>
+    </div>
+</div>
+
+<vm-player style="display: none;" dir="rtl" #player cross-origin="true" [currentTime]="currentTime"
+    (vmCurrentTimeChange)="CurrentTimeChange($event)" (vmDurationChange)="setDuration($event)"
+    (vmPausedChange)="stateChanged($event)" (vmPlaybackReady)="PlaybackReady($event)" (vmSeeked)="onSeek($event)"
+    (vmPlaybackReady)="onReady($event)">
+    <vm-audio>
+        <source data-src="{{ episode.link }}" type="audio/*" />
+    </vm-audio>
+    <vm-controls></vm-controls>
+</vm-player>

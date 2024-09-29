@@ -1,0 +1,84 @@
+.card a ,.podcasters-slider a ,.category-slider a{
+  text-decoration: none !important;
+}
+.card-title {
+  color: #92288F !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+min-height: 50px;
+  line-height: 1.5rem; /* Adjust based on your design */
+}
+.p-info{
+  color: #542779 !important;
+  overflow: hidden;
+  max-width: 100%;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.9em; /* Adjust line height if necessary */
+}
+
+.row {
+  margin: 0 !important;
+  width: 100%;
+  max-width: fit-content !important;
+}
+.image-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Maintain a 16:9 aspect ratio */
+  background-color: #F5EFFB; /* Placeholder color */
+  min-height: 230px;
+}
+
+.loader-img,.card-img-top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: -webkit-fill-available !important;
+
+  object-fit: cover;
+  visibility: visible !important; /* Ensure the image is visible */
+}
+.item-card{
+  box-shadow: 0px 0px 8px 4px #e9e9e9;
+}
+.loader-img{
+
+padding: 20px;
+  object-fit:contain  !important;
+
+}
+
+
+
+a:hover, a:focus {
+  text-decoration: none !important;
+}
+
+.truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  max-height: 1.2em; /* Adjust based on line height */
+  line-height: 1.2em; /* Adjust line height if necessary */
+}
+
+@media (min-width: 800px) {
+  .item-card{
+      min-height: 400px !important ;
+  }
+}
+.breadcrumb-page {
+  padding: 30px 45px !important;
+  /* background: #ffffff 0% 0% no-repeat padding-box; */
+  color: #fff;
+}

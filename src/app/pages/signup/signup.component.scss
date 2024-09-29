@@ -1,0 +1,101 @@
+.signup-main {
+    margin-bottom: 10px;
+    border-radius: 16px;
+    background-color: #fff;
+
+}
+.main-title-4{
+    text-align: center !important;
+    font-size: 52px;
+   color: #524779 !important;
+   font-weight:bold;
+}
+.submit-btn{
+    background-color: #92288F;
+    border-radius: 16px;
+}
+.submit-btn:hover{
+    background-color: #F5EFFB;
+    color: #542779 !important;
+}
+
+
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.social-login a {
+    display: flex;
+    align-items: center;
+}
+
+.social-login img {
+    vertical-align: middle; /* Ensures the image aligns well with text */
+}
+
+.register {
+    display: flex; /* Allows elements to be displayed in a row */
+    align-items: center; /* Vertically centers the text */
+    text-align: center; /* Centers the text horizontally */
+ width: 100%; /* Makes sure the element spans the width of the container */
+    color: #92288F;
+
+    margin: 20px 0px; /* Optional: Space above and below the line */
+}
+
+.register-span {
+    display: flex; /* Allows elements to be displayed in a row */
+    align-items: center; /* Vertically centers the text */
+    text-align: center; /* Centers the text horizontally */
+ //width: 100%; /* Makes sure the element spans the width of the container */
+    color: #92288F;
+
+    margin: 20px 3px; /* Optional: Space above and below the line */
+}
+
+.register::before,
+.register::after {
+    content: "";
+    flex: 1; /* Makes the lines take equal space on both sides */
+    border-bottom: 1px solid #F5F6FA; /* Creates the line */
+    margin: 0 10px; /* Adds space between the line and the text */
+}
+.Sign{
+    color: #546FFF;
+    font-weight: bold;
+}
+.Google{
+    border: 2px solid #F5F6FA;
+    padding: 6px 90px;
+    border-radius: 16px;
+    font-size: 16px;
+    color: #92288F;
+}.sign-in-link {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Vertically center the content */
+    text-align: center; /* Center text within the flex container */
+    width: 70%; /* Adjust the width to fit the container, if needed */
+}
+
+.sign-in-link img {
+    display: block;
+}
+.card{
+    box-shadow: 0px 0px 8px 4px #e9e9e9;}
+.label-reg{
+    font-size: 20px;
+    color: #542779;
+    margin: 8px;
+}
+.form-control,.input-group-text{
+    background-color: #FAF7FD !important;
+}
+.fa{
+    color:#542779;
+}

@@ -1,0 +1,96 @@
+<div class="container">
+    <section class="breadcrumb-page breadcrumb-page-pb-80">
+    <div class="sub-header">
+        <h3>{{ 'Favorite' | translate }}</h3>
+        <ol class="breadcrumb">
+            <li>
+                <a href="javascript:;" [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+            </li>
+            <li>
+                <a href="javascript:;" *ngIf="type == 'episodes'">&nbsp; {{ 'Episods' | translate }} </a>
+                <a href="javascript:;" *ngIf="type == 'programs'">&nbsp; {{ 'Programs' | translate }} </a>
+                <a href="javascript:;" *ngIf="type == 'broadcasters'">&nbsp; {{ 'Podcasters' | translate }} </a>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<div class="custom-section-2">
+    <div class="row" style="max-width:100%">
+        <div class="col-md-12 ml-auto col-xl-12 mr-auto">
+            <!-- Nav tabs -->
+            <div class="">
+                <div class="card-header card-header-2">
+                    <ul class="nav nav-tabs justify-content-center" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#episodes" role="tab" (click)="openTab('episodes')">
+                                {{ 'Episods' | translate }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#programs" role="tab" (click)="openTab('programs')">
+                                {{ 'Programs' | translate }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#podcasters" role="tab" (click)="openTab('broadcasters')">
+                                {{ 'Podcasters' | translate }}
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="container mt-5">
+                    <!-- Tab panes -->
+                    <div class="tab-content text-center">
+
+                        <div class="tab-pane active" id="episodes" role="tabpanel">
+                            <ng-container *ngIf="type == 'episodes' && favorite">
+                                <div class="row">
+                                    <ng-container *ngFor="let item of favorite.list">
+                                        <div class="col-md-3 col-12">
+                                            <app-vertical-episode [locale]="locale" [item]="item" (removedFromFavorites)="removeEpisode($event)"></app-vertical-episode>
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </ng-container>
+                        </div>
+
+                        <div class="tab-pane" id="programs" role="tabpanel">
+                            <ng-container *ngIf="type == 'programs' && favorite">
+                                <div class="row">
+                                    <ng-container *ngFor="let item of favorite.list">
+                                        <div class="col-md-3 col-12">
+                                            <app-program-card [locale]="locale" [program]="item" (removedFromFavorites)="removeProgram($event)"></app-program-card>
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </ng-container>
+                        </div>
+                        
+                        <div class="tab-pane" id="podcasters" role="tabpanel">
+                            <ng-container *ngIf="type == 'broadcasters' && favorite">
+                                <div class="row">
+                                    <ng-container *ngFor="let item of favorite.list">
+                                        <div class="col-md-3 col-12 ">
+                                            <app-podcaster-card [locale]="locale" [broadcaster]="item" (removedFromFavorites)="removePodcaster($event)"></app-podcaster-card>
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </ng-container>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center" *ngIf="hasMorePages">
+                <button class="load-more" type="button" (click)="nextPage()">{{ 'Load More' | translate }}</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

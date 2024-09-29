@@ -1,0 +1,167 @@
+<section class="breadcrumb-page breadcrumb-page-pb-120">
+    <div class="sub-header">
+        <h3>{{ 'Send Us Record' | translate }}</h3>
+        <ol class="breadcrumb">
+            <li>
+                <a href="javascript:;" [routerLink]="['/', locale.prefix]"> {{ 'Home' | translate }} / </a>
+            </li>
+            <!-- <li>
+                <a href="javascript:;">&nbsp; {{ 'Update Account' | translate }} </a>
+            </li> -->
+        </ol>
+    </div>
+</section>
+
+<div class="container">
+    <div class="custom-section-3">
+        <div class="row" style="max-width:100%">
+            <div class="col-md-2 col-xl-2 card h-f"></div>
+            <div class="col-md-8 col-xl-8 ml-3 card">
+                <h5 class="heading-title">{{ 'Send Us Record' | translate }}</h5>
+                <hr class="p-underline">
+                <div class="login-form">
+                    <form [formGroup]="form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text input-group-text-2" id="Name">
+                                            <i class="far fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input name="name" type="text" [formControlName]="'name'" class="form-control form-control-2" placeholder="{{'Full name' | translate}}" aria-label="Name" aria-describedby="Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text input-group-text-2" id="email"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                    </div>
+                                    <input name="email" type="text" [formControlName]="'email'" class="form-control form-control-2" placeholder="{{'email' | translate}}" aria-label="Email" aria-describedby="email">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="input-group mb-3">
+                                    <!-- <div class="input-group-prepend">
+                                        <span class="input-group-text input-group-text-2" id="message"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                                    </div> -->
+                                    <textarea 
+                                        class="form-control form-control-2" 
+                                        name="message" 
+                                        [formControlName]="'message'" 
+                                        id="message" 
+                                        rows="5" 
+                                        placeholder="message" 
+                                        aria-label="message" 
+                                        aria-describedby="message"
+                                        style="border: unset;
+                                        border-radius: 10px !important;
+                                        background: #f6f6f6;
+                                        padding: 20px">
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <button class="btn btn-primary submit-btn" 
+                                            style="margin: 5px; border-radius: 50px; background: #fff; color: #ff9851; border: 2px solid #ff9851; padding-left: 20px; padding-right: 20px;" 
+                                            *ngIf="recordingState == 'STOPPED'" 
+                                            (click)="startRecording()">
+                                            <i class="fa fa-microphone"></i>
+                                            {{ 'Record' | translate }}
+                                        </button>
+                                        <button class="btn btn-primary submit-btn" style="margin: 5px; background: #003b3d; border-radius: 50%;" *ngIf="recordingState == 'RECORDING' || recordingState == 'PAUSED'" (click)="stopRecording()">
+                                            <i class="fas fa-stop"></i>
+                                        </button>
+                                        <button class="btn btn-primary submit-btn" style="margin: 5px; border-radius: 50px; padding-left: 20px; padding-right: 20px;" *ngIf="recordingState == 'PAUSED'" (click)="resumeRecording()">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="btn btn-primary submit-btn" style="margin: 5px; border-radius: 50px; padding-left: 20px; padding-right: 20px;" *ngIf="recordingState == 'RECORDING'" (click)="pauseRecording()">
+                                            <i class="fas fa-pause"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <span>
+                                            <h2 style="margin: 0;">
+                                                {{counterToTime}} 
+                                                <small>/ 02:00</small>
+                                            </h2>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text input-group-text-2" id="Sex">
+                                            <i class="fa fa-microphone"></i>
+                                        </span>
+                                    </div>
+                                    
+                                    <select name="device" [formControlName]="'device'" class="form-control form-control-2 select-sex" *ngIf="_devices" (change)="setSelectedDevice($event)">
+                                        <ng-container *ngFor="let item of _devices">
+                                            <option [value]="item.deviceId">{{ item.label }}</option>
+                                        </ng-container>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <a style="margin: 5px; margin-bottom: 10px; color: #003b3d;" [style.display]="downloadingState == 'NOT_READY' ? 'none' : 'block'" id="download">
+                                    <i class="fa fa-download"></i>
+                                    {{ 'Download Recording' | translate }}
+                                </a>
+                            </div>
+                            <div class="col-md-7">
+                                <button 
+                                    [disabled]="form.disabled"
+                                    (click)="SendData()"
+                                    type="button" 
+                                    class="btn btn-primary btn-lg btn-block submit-btn">
+                                    {{ 'Submit' | translate }}
+                                </button>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- <div class="row">
+                            <div class="col-md-4">
+                                <button class="btn btn-primary submit-btn" style="margin: 5px;" *ngIf="recordingState == 'STOPPED'" (click)="startRecording()">
+                                    <i class="fas fa-play"></i>
+                                    Start
+                                </button>
+                                <button class="btn btn-primary submit-btn" style="margin: 5px;" *ngIf="recordingState == 'PAUSED'" (click)="resumeRecording()">
+                                    <i class="fas fa-play"></i>
+                                    Resume
+                                </button>
+                                <button class="btn btn-primary submit-btn" style="margin: 5px;" *ngIf="recordingState == 'RECORDING'" (click)="pauseRecording()">
+                                    <i class="fas fa-pause"></i>
+                                    Pause
+                                </button>
+                                <button class="btn btn-primary submit-btn" style="margin: 5px;" *ngIf="recordingState == 'RECORDING'" (click)="stopRecording()">
+                                    <i class="fas fa-stop"></i>
+                                    Stop
+                                </button>
+                                <a class="btn btn-primary submit-btn" style="margin: 5px; margin-bottom: 10px;" [style.display]="downloadingState == 'NOT_READY' ? 'none' : 'block'" id="download">
+                                    
+                                    Download
+                                </a>
+                            </div>
+                        </div> -->
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

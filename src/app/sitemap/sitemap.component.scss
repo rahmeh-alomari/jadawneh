@@ -1,0 +1,62 @@
+/* Base styles for the table */
+.sitemap-container {
+    margin: 0 auto;
+    padding: 20px;
+    direction: ltr; /* Default direction for English */
+}
+
+.sitemap-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #542779;
+}
+
+a {
+    color: #542779;
+}
+a:hover{
+    color: #1ccacd;
+}
+.table {
+    border: 1px solid #dee2e6;
+   
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 15px;
+}
+
+.table th {
+    background-color: #542779 !important;
+    color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Styles for Arabic */
+[dir="rtl"] .sitemap-container {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .table th,
+[dir="rtl"] .table td {
+    text-align: right;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    .table {
+        font-size: 0.9rem;
+    }
+    .sitemap-container h1 {
+        font-size: 1.5rem;
+        color: #542779;
+    }
+}

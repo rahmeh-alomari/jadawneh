@@ -1,0 +1,15 @@
+<!-- <div class="item card mb-3 custom-card-r">
+    <a [routerLink]="['/', locale.prefix, 'category', category.category_id]" class="image-link">
+        <img class="card-img-top hover-shadow" [src]="category.image" alt="">
+    </a>
+</div> -->
+<div class="item  mb-3 custom-card">
+    <a [routerLink]="['/', locale.prefix, 'category', category.category_id]" class="image-link category-image">
+        <!-- <h4>{{'App Name' | translate}}</h4> -->
+        <!-- <h3>{{ category.title }}</h3> -->
+        <div class="category-container">
+            <img src="{{category.image}}" alt="{{category.image}}" class="category-image">
+            <h4 class="category-text">{{category.title | translate}}</h4>
+          </div>
+    </a>
+</div>

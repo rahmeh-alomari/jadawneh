@@ -1,0 +1,25 @@
+<div class="parent ">
+  <div class="item " >
+    <div>
+  
+      <a [routerLink]="[
+          '/',
+          locale.prefix,
+          'podcaster',
+          broadcaster.broadcaster_id
+        ]" class="image-link">
+        <div class=" pod-card">
+          <h4 class="podcaster-name">
+            {{ broadcaster.title }}
+            <!-- <p class="mx-2">
+              {{ broadcaster.title }}
+            </p> -->
+          </h4>
+          <img class="card-pod-img-top img-fluid" [src]="broadcaster.image" alt=""/>
+        </div>
+     
+  
+      </a>
+    </div>
+  </div>
+</div>

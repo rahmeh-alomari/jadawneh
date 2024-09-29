@@ -1,0 +1,43 @@
+.row {
+    margin: auto !important;
+    width: 86% !important;
+    max-width: 89% !important;
+
+}
+.Podcaster-name{
+  font-size: 1.8em;
+}
+@media (min-width: 800px) {
+    .justified-text{
+        max-width: 27.5em;
+        width: 26.188em;
+         text-align: justify;
+         // text-align-last: justify;
+     }
+  }
+.Podcaster-tilt{
+    font-size: 32px !important;
+    text-align: center;
+    font-weight: bold;color: #524779;
+}
+.breadcrumb-page {
+ 
+    color: #fff;
+  }
+  .justified-text{
+    text-align: start;
+  }
+  @media (min-width: 1000px) {
+    .breadcrumb-page {
+        padding: 30px 85px  !important;
+      
+      }
+  }
+
+  @media (max-width: 1000px) {
+    .Podcaster-tilt{
+        font-size: 16px !important;
+        text-align: start;
+      
+    }
+  }

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download App</title>
+
+  <style>
+    /*body {*/
+    /*  background-color: #0069d9;*/
+    /*  margin: 0;*/
+    /*  padding: 0;*/
+    /*}*/
+
+    .store a {
+      text-decoration: none;
+    }
+
+    .download-app {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 0 20px;
+    }
+
+    .store img {
+      width: 200px;
+      margin-right: 10px;
+    }
+
+    .main-title-2 {
+      font-size: 60px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .main-title-2 {
+        font-size: 50px;
+      }
+    }
+
+    .main-title-2 span {
+      font-size: 24px;
+      display: block;
+      font-weight: 100;
+    }
+
+    .main-title-2::before {
+      position: absolute;
+      content: "";
+      width: 5px;
+      height: 100px;
+      background: #542799 0% 0% no-repeat padding-box;
+      z-index: -1;
+      left: 2px;
+      top: 53px;
+    }
+
+    .main-title-3 {
+      font-size: 24px;
+      font-weight: 700;
+      padding: 0 18px;
+    }
+
+    .main-title-3 span {
+      font-size: 18px;
+      display: block;
+      font-weight: 100;
+    }
+
+    .main-title-3::before {
+      position: absolute;
+      content: "";
+      width: 5px;
+      height: 50px;
+      background: #0069d9;
+      z-index: -1;
+      left: 17px;
+      top: 53px;
+    }
+
+    .shake-effect:hover {
+      animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+      transform: translate3d(0, 0, 0);
+      perspective: 1000px;
+    }
+
+    .col-image {
+      width: 60%;
+      text-align: right;
+    }
+
+
+.col-image {
+  width: 52%;
+  text-align: right;
+}
+  </style>
+</head>
+
+<body>
+  <div class="row download-app">
+    <div class="col-lg-6 col-md-6 col-md-12 text-left">
+      <h2 class="main-title-2">
+        <span>{{ "Download App" }}</span>
+        {{ "Podqasti" }}
+      </h2>
+
+      <div class="store">
+        <a href="https://qr.podqasti.com">
+          <img
+            src="https://backend.podqasti.com/images/google play.jpeg"
+            alt=""
+            class="shake-effect"
+          />
+        </a>
+        <a href="https://qr.podqasti.com">
+          <img
+            src="https://backend.podqasti.com/images/app store.jpeg"
+            alt=""
+            class="shake-effect"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="col-image">
+      <img src="https://backend.podqasti.com/images/333.png" alt="" style="width:600px" />
+    </div>
+  </div>
+</body>
+
+</html>

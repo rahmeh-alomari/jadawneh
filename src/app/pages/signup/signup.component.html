@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row mt-5 ">
+        <!-- <div class="col-md-12 col-12 color-logo">
+            <a [routerLink]="['/', locale.prefix]">
+                <img src="assets/podcasti/images/color-logo.png" alt="">
+            </a>
+        </div> -->
+        <div class="col-md-8 col-12 card" style="margin: auto;margin-bottom: 30px;padding: 20px;">
+            <h5 class="main-title-4 ">
+                {{ 'Create new account' | translate }}
+                <!-- <span>{{ 'new account' | translate }}</span> -->
+            </h5>
+            <div class="login-form">
+                <form [formGroup]="form">
+
+                    <p class="label-reg">{{ 'Email' | translate }}</p>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text input-group-text-2" id="email"><i class="fa fa-envelope"
+                                    aria-hidden="true"></i></span>
+                        </div>
+                        <input name="email" type="email" [formControlName]="'email'" class="form-control form-control-2" appValidateInputDirective="Email is required"
+                            placeholder="{{ 'type your full Email' | translate }}" aria-label="Email" aria-describedby="email">
+                    </div>
+
+                    <p class="label-reg">{{ 'Name' | translate }}</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text input-group-text-2" id="name"><i class="fa fa-user"
+                                    aria-hidden="true"></i></span>
+                        </div>
+                        <input name="name" type="name" [formControlName]="'name'" class="form-control form-control-2" appValidateInputDirective="Name is required" 
+                            placeholder="{{ 'type your full name' | translate }}" aria-label="Name"
+                            aria-describedby="Name">
+                    </div>
+                    <p class="label-reg">{{ 'Password' | translate }}</p>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text input-group-text-2" id="password"><i class="fa fa-lock"
+                                    aria-hidden="true"></i></span>
+                        </div>
+                        <input name="password" type="password" [formControlName]="'password'"
+                            class="form-control form-control-2" placeholder="{{ 'type your full Password' | translate }}"
+                            aria-label="Password" aria-describedby="password" appValidateInputDirective="password is required" >
+                    </div>
+                    <p class="label-reg">{{ 'Password Confirmation' | translate }}</p>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text input-group-text-2" id="password"><i class="fa fa-lock"
+                                    aria-hidden="true"></i></span>
+                        </div>
+                        <input name="password" type="password" [formControlName]="'password_confirmation'" appValidateInputDirective="password is required" 
+                            class="form-control form-control-2" placeholder="{{ 'Password Confirmation' | translate }}"
+                            aria-label="Password Confirmation" aria-describedby="Password Confirmation">
+                    </div>
+
+                    <button  [disabled]="form.invalid" (click)="signUp()" type="button"
+                        class="btn  btn-lg btn-block submit-btn">
+                        {{ 'Submitreg' | translate }}
+                    </button>
+                </form>
+                <div class="social-login">
+                    <!-- <span class="text-left sign-text">{{ 'Register Using' | translate }}</span> -->
+                    <p class="register">{{ 'Or you can register by' | translate }}</p>
+                    <a href="javascript:;" (click)="loginWithGoogle()" class="Google sign-in-link">
+                        {{ 'Sign in with Google' | translate }}
+                        <img src="assets/podcasti/images/google.png" alt="Google icon" width="25px">
+                    </a>
+
+                    <div class="text-right sign-social-media">
+                        <!-- <a href="javascript:;" (click)="loginWithFacebook()">
+                            <img src="assets/podcasti/images/facebook.svg" alt="" width="70px">
+                        </a> -->
+
+                        <div>
+
+                            <a [routerLink]="['/', locale.prefix, 'account', 'sign-in']" class="Sign px-5"> <span
+                                    class="register-span ">
+                                    {{ 'Has Account?' | translate }}
+                                </span><span class="register-span Sign">
+                                    {{ 'Sign in' | translate }}
+                                </span> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-md-6 col-12 p-0">
+            <div class="login-image">
+                <img src="assets/podcasti/images/background.png" alt="">
+             
+            </div>
+        </div> -->
+    </div>
+</div>

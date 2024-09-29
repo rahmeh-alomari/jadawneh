@@ -1,0 +1,21 @@
+<div class="container sitemap-container">
+    <h1 class="text-center my-4">{{ 'Podcasti XML Sitemap' | translate }}</h1>
+    <table class="table table-striped table-bordered text-center">
+        <thead class="thead-dark">
+            <tr>
+                <th>{{ 'URL' | translate }}</th>
+                <th>{{ 'priority' | translate }}</th>
+                <th>{{ 'changefreq' | translate }}</th>
+                <th>{{ 'Last Modified' | translate }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let url of parseSitemap(sitemapContent)">
+                <td><a [href]="url.loc" target="_blank">{{ url.loc }}</a></td>
+                <td>{{ url.priority }}</td>
+                <td>{{ url.changefreq }}</td>
+                <td>{{ url.lastmod }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
